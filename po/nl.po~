@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Midnight Commander\n"
 "Report-Msgid-Bugs-To: https://github.com/MidnightCommander/mc/issues\n"
-"POT-Creation-Date: 2025-11-13 11:58-0800\n"
+"POT-Creation-Date: 2025-06-19 21:07+0300\n"
 "PO-Revision-Date: 2010-12-29 10:19+0000\n"
 "Last-Translator: Yury V. Zaytsev <yury@shurup.com>, 2016-2017,2025\n"
 "Language-Team: Dutch (http://app.transifex.com/mc/mc/language/nl/)\n"
@@ -161,47 +161,29 @@ msgstr ""
 "%s\n"
 "Standaard skin is geladen"
 
-#, fuzzy, c-format
+#, c-format
 msgid ""
-"Unable to use '%s' skin with 256 colors support:\n"
-"%s\n"
+"Unable to use '%s' skin with 256 colors support\n"
+"on non-256 colors terminal.\n"
 "Default skin has been loaded"
 msgstr ""
-"Niet instaat '%s' skin te gebruiken met true-colors ondersteuning\n"
-"%s\n"
+"Niet instaat '%s' skin te gebruiken met 256 colors support\n"
+"of non-256 colors terminal.\n"
 "Standaard skin is geladen"
 
-msgid ""
-"\n"
-"If your terminal supports 256 colors, you need to set your TERM\n"
-"environment variable to match your terminal, perhaps using\n"
-"a *-256color or *-direct256 variant. Use the 'toe -a'\n"
-"command to list all available variants on your system.\n"
-msgstr ""
+msgid "True color not supported with ncurses."
+msgstr "True color wordt in ncurses niet ondersteund."
 
-msgid ""
-"For true color support, you need version 6.1 or later of the ncurses\n"
-"library with wide character and ABI 6 or higher support.\n"
-"Please upgrade your system.\n"
-msgstr ""
-
-msgid ""
-"\n"
-"If your terminal supports true colors, you need to set your TERM\n"
-"environment variable to a *-direct256, *-direct16, or *-direct variant.\n"
-"Use the 'toe -a' command to list all available variants on your system.\n"
-msgstr ""
+msgid "Your terminal doesn't even seem to support 256 colors."
+msgstr "Je terminal lijkt 256-kleuren niet eens te ondersteunen. "
 
 msgid "True color not supported in this slang version."
 msgstr "True color wordt in deze dialectversie niet ondersteund."
 
-msgid ""
-"\n"
-"If your terminal supports true colors, you need to set your TERM\n"
-"environment variable to a *-direct256, *-direct16, or *-direct variant.\n"
-"Use the 'toe -a' command to list all available variants on your system.\n"
-"Alternatively, you can set COLORTERM=truecolor.\n"
+msgid "Set COLORTERM=truecolor if your terminal really supports true colors."
 msgstr ""
+"Zet COLORTERM=truecolor indien de terminal daadwerkelijk true-colors "
+"ondersteund."
 
 msgid "Escape"
 msgstr "Escape"
@@ -1086,12 +1068,6 @@ msgstr "Verander regeleindes naar:"
 msgid "Save As"
 msgstr "Opslaan als"
 
-#, fuzzy, c-format
-msgid ""
-"Cannot create directory\n"
-"%s"
-msgstr "Aanmaken van map %s mislukt"
-
 msgid "&Quick save"
 msgstr "&Snel opslaan "
 
@@ -1868,10 +1844,6 @@ msgstr "Invoer / weergave karakterset:"
 msgid "Selected source (file I/O) codepage"
 msgstr ""
 
-#, c-format
-msgid "Copyright (C) 2025-%d River Microelectronics"
-msgstr ""
-
 msgid "Classic terminal file manager inspired by Norton Commander."
 msgstr ""
 
@@ -1914,8 +1886,7 @@ msgstr "Timeout:"
 msgid "Pause after run"
 msgstr " Pauze na uitvoering"
 
-#, fuzzy
-msgid "Use internal &editor (mcedit)"
+msgid "Use internal edi&t"
 msgstr "In&terne editor gebruiken"
 
 msgid "Use internal vie&w"
@@ -2212,8 +2183,7 @@ msgstr "Hierarchie top van mappen"
 msgid "Inode uses extents"
 msgstr "Inode gebruikt extents"
 
-#, fuzzy
-msgid "Huge file"
+msgid "Huge_file"
 msgstr "Huge_file"
 
 msgid "No COW"
@@ -2406,6 +2376,12 @@ msgstr "Maak een nieuwe map"
 
 msgid "Enter directory name:"
 msgstr "Geef mapnaam:"
+
+#, fuzzy, c-format
+msgid ""
+"Cannot create directory\n"
+"%s"
+msgstr "Aanmaken van map %s mislukt"
 
 msgid "Extension file edit"
 msgstr "Bewerken uitbreidingsbestand"
@@ -3107,9 +3083,6 @@ msgstr "&Info"
 msgid "&Tree"
 msgstr "&Boom"
 
-msgid "Paneli&ze"
-msgstr "Als vens&ter"
-
 msgid "&Listing format..."
 msgstr "&Lijstformaat..."
 
@@ -3130,6 +3103,9 @@ msgstr "S&hellverbinding...    "
 
 msgid "SFTP li&nk..."
 msgstr "SFTP li&nk…"
+
+msgid "Paneli&ze"
+msgstr "Als vens&ter"
 
 msgid "&Rescan"
 msgstr "&Herlezen"
@@ -3588,19 +3564,11 @@ msgstr "&XTerm schermnaam"
 msgid "&Show free space"
 msgstr "&Geef vrije ruimte weer"
 
-#, fuzzy
-msgid "&Dynamic file list"
-msgstr "&Lange bestandenlijst"
-
 msgid "Panel split"
 msgstr "Venstersplitsing"
 
 msgid "Console output"
 msgstr "Console-output"
-
-#, fuzzy
-msgid "Dynamic file list"
-msgstr "&Lange bestandenlijst"
 
 msgid "&Vertical"
 msgstr "&Verticaal"
@@ -3610,9 +3578,6 @@ msgstr "&Horizontaal"
 
 msgid "Output lines:"
 msgstr "Output-regels:"
-
-msgid "Debounce (sec):"
-msgstr ""
 
 msgid "Layout"
 msgstr "Vormgeving"
@@ -4774,28 +4739,6 @@ msgstr "Doorgaan vanaf het begin?"
 
 msgid "Cannot fetch a local copy of /ftp://some.host/editme.txt"
 msgstr "Kan geen lokale versie van /ftp://some.host/editme.txt ophalen"
-
-#, c-format
-#~ msgid ""
-#~ "Unable to use '%s' skin with 256 colors support\n"
-#~ "on non-256 colors terminal.\n"
-#~ "Default skin has been loaded"
-#~ msgstr ""
-#~ "Niet instaat '%s' skin te gebruiken met 256 colors support\n"
-#~ "of non-256 colors terminal.\n"
-#~ "Standaard skin is geladen"
-
-#~ msgid "True color not supported with ncurses."
-#~ msgstr "True color wordt in ncurses niet ondersteund."
-
-#~ msgid "Your terminal doesn't even seem to support 256 colors."
-#~ msgstr "Je terminal lijkt 256-kleuren niet eens te ondersteunen. "
-
-#~ msgid ""
-#~ "Set COLORTERM=truecolor if your terminal really supports true colors."
-#~ msgstr ""
-#~ "Zet COLORTERM=truecolor indien de terminal daadwerkelijk true-colors "
-#~ "ondersteund."
 
 #~ msgid "&Cancel quit"
 #~ msgstr "&Annuleren afsluiten"

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Midnight Commander\n"
 "Report-Msgid-Bugs-To: https://github.com/MidnightCommander/mc/issues\n"
-"POT-Creation-Date: 2025-11-13 11:58-0800\n"
+"POT-Creation-Date: 2025-06-19 21:07+0300\n"
 "PO-Revision-Date: 2010-12-29 10:19+0000\n"
 "Last-Translator: Yury V. Zaytsev <yury@shurup.com>, 2025\n"
 "Language-Team: Norwegian Bokmål (http://app.transifex.com/mc/mc/language/"
@@ -162,47 +162,28 @@ msgstr ""
 "%s\n"
 "Lastet standarddrakten istedenfor."
 
-#, fuzzy, c-format
+#, c-format
 msgid ""
-"Unable to use '%s' skin with 256 colors support:\n"
-"%s\n"
+"Unable to use '%s' skin with 256 colors support\n"
+"on non-256 colors terminal.\n"
 "Default skin has been loaded"
 msgstr ""
-"Kan ikke bruke den 24-biters drakten «%s»:\n"
-"%s\n"
+"Kan ikke bruke den 256-fargers drakten «%s»\n"
+"i terminaler som ikke har 256 farger.\n"
 "Lastet standarddrakten istedenfor."
 
-msgid ""
-"\n"
-"If your terminal supports 256 colors, you need to set your TERM\n"
-"environment variable to match your terminal, perhaps using\n"
-"a *-256color or *-direct256 variant. Use the 'toe -a'\n"
-"command to list all available variants on your system.\n"
-msgstr ""
+msgid "True color not supported with ncurses."
+msgstr "ncurses støtter ikke 24-biters farge"
 
-msgid ""
-"For true color support, you need version 6.1 or later of the ncurses\n"
-"library with wide character and ABI 6 or higher support.\n"
-"Please upgrade your system.\n"
-msgstr ""
-
-msgid ""
-"\n"
-"If your terminal supports true colors, you need to set your TERM\n"
-"environment variable to a *-direct256, *-direct16, or *-direct variant.\n"
-"Use the 'toe -a' command to list all available variants on your system.\n"
-msgstr ""
+msgid "Your terminal doesn't even seem to support 256 colors."
+msgstr "Denne terminalen ser ikke ut til å støtte 256 farger."
 
 msgid "True color not supported in this slang version."
 msgstr "Denne versjonen av S-Lang støtter ikke 24-biters farge."
 
-msgid ""
-"\n"
-"If your terminal supports true colors, you need to set your TERM\n"
-"environment variable to a *-direct256, *-direct16, or *-direct variant.\n"
-"Use the 'toe -a' command to list all available variants on your system.\n"
-"Alternatively, you can set COLORTERM=truecolor.\n"
+msgid "Set COLORTERM=truecolor if your terminal really supports true colors."
 msgstr ""
+"Sett COLORTERM=truecolor hvis terminalen virkelig støtter 24-biters farge."
 
 msgid "Escape"
 msgstr "Escape"
@@ -1115,12 +1096,6 @@ msgstr "Endre linjeskift til:"
 msgid "Save As"
 msgstr "Lagre som"
 
-#, fuzzy, c-format
-msgid ""
-"Cannot create directory\n"
-"%s"
-msgstr "Klarte ikke opprette mappa %s"
-
 msgid "&Quick save"
 msgstr "&Rask lagring"
 
@@ -1900,10 +1875,6 @@ msgstr "Tegnkoding for inndata/visning:"
 msgid "Selected source (file I/O) codepage"
 msgstr ""
 
-#, fuzzy, c-format
-msgid "Copyright (C) 2025-%d River Microelectronics"
-msgstr "Opphavsrett (C) 1996-2025 Free Software Foundation"
-
 msgid "Classic terminal file manager inspired by Norton Commander."
 msgstr ""
 
@@ -1946,8 +1917,7 @@ msgstr "Tidsavbrudd:"
 msgid "Pause after run"
 msgstr "Pause etter kjøring"
 
-#, fuzzy
-msgid "Use internal &editor (mcedit)"
+msgid "Use internal edi&t"
 msgstr "&Rediger internt "
 
 msgid "Use internal vie&w"
@@ -2244,8 +2214,7 @@ msgstr "Øverst i mappehierarkiet"
 msgid "Inode uses extents"
 msgstr "Inode bruker extent"
 
-#, fuzzy
-msgid "Huge file"
+msgid "Huge_file"
 msgstr "Enorm fil"
 
 msgid "No COW"
@@ -2438,6 +2407,12 @@ msgstr "Opprett en ny mappe"
 
 msgid "Enter directory name:"
 msgstr "Skriv inn mappenavn:"
+
+#, fuzzy, c-format
+msgid ""
+"Cannot create directory\n"
+"%s"
+msgstr "Klarte ikke opprette mappa %s"
 
 msgid "Extension file edit"
 msgstr "Rediger utvidelsesfil"
@@ -3151,9 +3126,6 @@ msgstr "&Informasjon"
 msgid "&Tree"
 msgstr "&Tre"
 
-msgid "Paneli&ze"
-msgstr "&Vis lagt til i panel"
-
 msgid "&Listing format..."
 msgstr "&Utlistingsformat ..."
 
@@ -3174,6 +3146,9 @@ msgstr "Koble til &skall ..."
 
 msgid "SFTP li&nk..."
 msgstr "K&oble til SFTP ..."
+
+msgid "Paneli&ze"
+msgstr "&Vis lagt til i panel"
 
 msgid "&Rescan"
 msgstr "Opp&dater"
@@ -3632,19 +3607,11 @@ msgstr "Vindustittel i &XTerm"
 msgid "&Show free space"
 msgstr "Vis ledig &diskplass"
 
-#, fuzzy
-msgid "&Dynamic file list"
-msgstr "&Lang filliste"
-
 msgid "Panel split"
 msgstr "Panelsplitting"
 
 msgid "Console output"
 msgstr "Utdata til konsoll"
-
-#, fuzzy
-msgid "Dynamic file list"
-msgstr "&Lang filliste"
 
 msgid "&Vertical"
 msgstr "&Loddrett"
@@ -3654,9 +3621,6 @@ msgstr "&Vannrett"
 
 msgid "Output lines:"
 msgstr "Utdatalinjer:"
-
-msgid "Debounce (sec):"
-msgstr ""
 
 msgid "Layout"
 msgstr "Utforming"
@@ -4835,27 +4799,6 @@ msgstr "Fortsett fra begynnelsen?"
 
 msgid "Cannot fetch a local copy of /ftp://some.host/editme.txt"
 msgstr "Klarte ikke hente en lokal kopi av /ftp://some.host/editme.txt"
-
-#, c-format
-#~ msgid ""
-#~ "Unable to use '%s' skin with 256 colors support\n"
-#~ "on non-256 colors terminal.\n"
-#~ "Default skin has been loaded"
-#~ msgstr ""
-#~ "Kan ikke bruke den 256-fargers drakten «%s»\n"
-#~ "i terminaler som ikke har 256 farger.\n"
-#~ "Lastet standarddrakten istedenfor."
-
-#~ msgid "True color not supported with ncurses."
-#~ msgstr "ncurses støtter ikke 24-biters farge"
-
-#~ msgid "Your terminal doesn't even seem to support 256 colors."
-#~ msgstr "Denne terminalen ser ikke ut til å støtte 256 farger."
-
-#~ msgid ""
-#~ "Set COLORTERM=truecolor if your terminal really supports true colors."
-#~ msgstr ""
-#~ "Sett COLORTERM=truecolor hvis terminalen virkelig støtter 24-biters farge."
 
 #~ msgid "&Cancel quit"
 #~ msgstr "Av&bryt avslutning"

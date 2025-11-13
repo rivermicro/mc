@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Midnight Commander\n"
 "Report-Msgid-Bugs-To: https://github.com/MidnightCommander/mc/issues\n"
-"POT-Creation-Date: 2025-11-13 11:58-0800\n"
+"POT-Creation-Date: 2025-06-19 21:07+0300\n"
 "PO-Revision-Date: 2010-12-29 10:19+0000\n"
 "Last-Translator: Yury V. Zaytsev <yury@shurup.com>, 2016,2025\n"
 "Language-Team: Slovak (http://app.transifex.com/mc/mc/language/sk/)\n"
@@ -164,47 +164,27 @@ msgstr ""
 "%s\n"
 "Bola načitaná základná schéma"
 
-#, fuzzy, c-format
+#, c-format
 msgid ""
-"Unable to use '%s' skin with 256 colors support:\n"
-"%s\n"
+"Unable to use '%s' skin with 256 colors support\n"
+"on non-256 colors terminal.\n"
 "Default skin has been loaded"
 msgstr ""
-"Nemožno použiť schému  '%s'  s podporou true color:\n"
-"%s\n"
-"Bola načitaná základná schéma"
+"Nie je možné používať tému vzhľadu „%s“ s podporou\n"
+"256 farieb na termináli, ktorý nemá 256 farieb.\n"
+"Bol načítaný predvolený vzhľad"
 
-msgid ""
-"\n"
-"If your terminal supports 256 colors, you need to set your TERM\n"
-"environment variable to match your terminal, perhaps using\n"
-"a *-256color or *-direct256 variant. Use the 'toe -a'\n"
-"command to list all available variants on your system.\n"
-msgstr ""
+msgid "True color not supported with ncurses."
+msgstr "Režim True color nie je v ncurses podporovaný."
 
-msgid ""
-"For true color support, you need version 6.1 or later of the ncurses\n"
-"library with wide character and ABI 6 or higher support.\n"
-"Please upgrade your system.\n"
-msgstr ""
-
-msgid ""
-"\n"
-"If your terminal supports true colors, you need to set your TERM\n"
-"environment variable to a *-direct256, *-direct16, or *-direct variant.\n"
-"Use the 'toe -a' command to list all available variants on your system.\n"
-msgstr ""
+msgid "Your terminal doesn't even seem to support 256 colors."
+msgstr "Váš terminál asi nepodporuje ani 256 farieb."
 
 msgid "True color not supported in this slang version."
 msgstr "Režim True color nie je podpora v tejto verzii slang."
 
-msgid ""
-"\n"
-"If your terminal supports true colors, you need to set your TERM\n"
-"environment variable to a *-direct256, *-direct16, or *-direct variant.\n"
-"Use the 'toe -a' command to list all available variants on your system.\n"
-"Alternatively, you can set COLORTERM=truecolor.\n"
-msgstr ""
+msgid "Set COLORTERM=truecolor if your terminal really supports true colors."
+msgstr "Ak váš terminál proporuje True color, nastavte COLORTERM=truecolor."
 
 msgid "Escape"
 msgstr "Escape"
@@ -1085,12 +1065,6 @@ msgstr "Zmeniť konce riadkov na:"
 msgid "Save As"
 msgstr "Uložiť ako"
 
-#, fuzzy, c-format
-msgid ""
-"Cannot create directory\n"
-"%s"
-msgstr "Nepodarilo sa vytvoriť adresár %s"
-
 msgid "&Quick save"
 msgstr "&Rýchle uloženie"
 
@@ -1866,10 +1840,6 @@ msgstr "Vstupná/zobrazovacia znaková sada:"
 msgid "Selected source (file I/O) codepage"
 msgstr ""
 
-#, c-format
-msgid "Copyright (C) 2025-%d River Microelectronics"
-msgstr ""
-
 msgid "Classic terminal file manager inspired by Norton Commander."
 msgstr ""
 
@@ -1912,8 +1882,7 @@ msgstr "Časový limit:"
 msgid "Pause after run"
 msgstr "Pozastaviť po vykonaní"
 
-#, fuzzy
-msgid "Use internal &editor (mcedit)"
+msgid "Use internal edi&t"
 msgstr "Používať interný edi&tor"
 
 msgid "Use internal vie&w"
@@ -2209,9 +2178,8 @@ msgstr ""
 msgid "Inode uses extents"
 msgstr ""
 
-#, fuzzy
-msgid "Huge file"
-msgstr "Uložiť súbor"
+msgid "Huge_file"
+msgstr ""
 
 msgid "No COW"
 msgstr ""
@@ -2401,6 +2369,12 @@ msgstr "Vytvoriť nový adresár"
 
 msgid "Enter directory name:"
 msgstr "Zadajte názov adresára:"
+
+#, fuzzy, c-format
+msgid ""
+"Cannot create directory\n"
+"%s"
+msgstr "Nepodarilo sa vytvoriť adresár %s"
 
 msgid "Extension file edit"
 msgstr "Upraviť príponu názvu súboru"
@@ -3101,9 +3075,6 @@ msgstr "&Info"
 msgid "&Tree"
 msgstr "&Strom"
 
-msgid "Paneli&ze"
-msgstr "Paneli&zovať"
-
 msgid "&Listing format..."
 msgstr "&Formát výpisu..."
 
@@ -3124,6 +3095,9 @@ msgstr "Pripojenie s&hell..."
 
 msgid "SFTP li&nk..."
 msgstr ""
+
+msgid "Paneli&ze"
+msgstr "Paneli&zovať"
 
 msgid "&Rescan"
 msgstr "&Znovu načítať"
@@ -3588,19 +3562,11 @@ msgstr "Názov okna &XTerm"
 msgid "&Show free space"
 msgstr "Zobraziť voľný prie&stor"
 
-#, fuzzy
-msgid "&Dynamic file list"
-msgstr "D&lhý výpis súborov"
-
 msgid "Panel split"
 msgstr "Rozdelenie panelov"
 
 msgid "Console output"
 msgstr "Výstup konzoly"
-
-#, fuzzy
-msgid "Dynamic file list"
-msgstr "D&lhý výpis súborov"
 
 msgid "&Vertical"
 msgstr "&Vertikálne"
@@ -3610,9 +3576,6 @@ msgstr "&Horizontálne"
 
 msgid "Output lines:"
 msgstr "Riadky výstupu:"
-
-msgid "Debounce (sec):"
-msgstr ""
 
 msgid "Layout"
 msgstr "Rozmiestnenie"
@@ -4754,26 +4717,6 @@ msgstr "Pokračovať od začiatku?"
 
 msgid "Cannot fetch a local copy of /ftp://some.host/editme.txt"
 msgstr "Nemožno stiahnuť lokálnu kópiu /ftp://some.host/editme.txt"
-
-#, c-format
-#~ msgid ""
-#~ "Unable to use '%s' skin with 256 colors support\n"
-#~ "on non-256 colors terminal.\n"
-#~ "Default skin has been loaded"
-#~ msgstr ""
-#~ "Nie je možné používať tému vzhľadu „%s“ s podporou\n"
-#~ "256 farieb na termináli, ktorý nemá 256 farieb.\n"
-#~ "Bol načítaný predvolený vzhľad"
-
-#~ msgid "True color not supported with ncurses."
-#~ msgstr "Režim True color nie je v ncurses podporovaný."
-
-#~ msgid "Your terminal doesn't even seem to support 256 colors."
-#~ msgstr "Váš terminál asi nepodporuje ani 256 farieb."
-
-#~ msgid ""
-#~ "Set COLORTERM=truecolor if your terminal really supports true colors."
-#~ msgstr "Ak váš terminál proporuje True color, nastavte COLORTERM=truecolor."
 
 #~ msgid "&Cancel quit"
 #~ msgstr "&Zrušiť ukončenie"

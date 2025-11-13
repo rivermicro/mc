@@ -31,7 +31,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Midnight Commander\n"
 "Report-Msgid-Bugs-To: https://github.com/MidnightCommander/mc/issues\n"
-"POT-Creation-Date: 2025-11-13 11:58-0800\n"
+"POT-Creation-Date: 2025-06-19 21:07+0300\n"
 "PO-Revision-Date: 2010-12-29 10:19+0000\n"
 "Last-Translator: Yury V. Zaytsev <yury@shurup.com>, 2025\n"
 "Language-Team: Russian (http://app.transifex.com/mc/mc/language/ru/)\n"
@@ -39,9 +39,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
-"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #, fuzzy
 msgid "No translation"
@@ -183,47 +183,29 @@ msgstr ""
 "%s\n"
 "Используется скин по умолчанию"
 
-#, fuzzy, c-format
+#, c-format
 msgid ""
-"Unable to use '%s' skin with 256 colors support:\n"
-"%s\n"
+"Unable to use '%s' skin with 256 colors support\n"
+"on non-256 colors terminal.\n"
 "Default skin has been loaded"
 msgstr ""
-"Не удалось использовать скин \"%s\", требующий True Color:\n"
-"%s\n"
+"Нельзя использовать скин \"%s\" с 256 цветами,\n"
+"на терминале без поддержки 256 цветов.\n"
 "Используется скин по умолчанию"
 
-msgid ""
-"\n"
-"If your terminal supports 256 colors, you need to set your TERM\n"
-"environment variable to match your terminal, perhaps using\n"
-"a *-256color or *-direct256 variant. Use the 'toe -a'\n"
-"command to list all available variants on your system.\n"
-msgstr ""
+msgid "True color not supported with ncurses."
+msgstr "True Color не поддерживается ncurses."
 
-msgid ""
-"For true color support, you need version 6.1 or later of the ncurses\n"
-"library with wide character and ABI 6 or higher support.\n"
-"Please upgrade your system.\n"
-msgstr ""
-
-msgid ""
-"\n"
-"If your terminal supports true colors, you need to set your TERM\n"
-"environment variable to a *-direct256, *-direct16, or *-direct variant.\n"
-"Use the 'toe -a' command to list all available variants on your system.\n"
-msgstr ""
+msgid "Your terminal doesn't even seem to support 256 colors."
+msgstr "Похоже, ваш терминал не поддерживает даже 256 цветов."
 
 msgid "True color not supported in this slang version."
 msgstr "True Color не поддерживается в этой версии slang."
 
-msgid ""
-"\n"
-"If your terminal supports true colors, you need to set your TERM\n"
-"environment variable to a *-direct256, *-direct16, or *-direct variant.\n"
-"Use the 'toe -a' command to list all available variants on your system.\n"
-"Alternatively, you can set COLORTERM=truecolor.\n"
+msgid "Set COLORTERM=truecolor if your terminal really supports true colors."
 msgstr ""
+"Установите COLORTERM=truecolor, если ваш терминал действительно поддерживает "
+"True Color."
 
 msgid "Escape"
 msgstr "Клавиша Esc "
@@ -1136,12 +1118,6 @@ msgstr "Изменить окончания строк на:"
 msgid "Save As"
 msgstr "Сохранить как"
 
-#, fuzzy, c-format
-msgid ""
-"Cannot create directory\n"
-"%s"
-msgstr "Не удалось создать каталог \"%s\""
-
 msgid "&Quick save"
 msgstr "&Быстрое сохранение"
 
@@ -1919,10 +1895,6 @@ msgstr "Кодировка ввода/вывода:"
 msgid "Selected source (file I/O) codepage"
 msgstr ""
 
-#, fuzzy, c-format
-msgid "Copyright (C) 2025-%d River Microelectronics"
-msgstr "Авторское право (C) 1996-2025 Фонд свободного программного обеспечения"
-
 msgid "Classic terminal file manager inspired by Norton Commander."
 msgstr ""
 
@@ -1965,8 +1937,7 @@ msgstr "Период:"
 msgid "Pause after run"
 msgstr "Пауза после выполнения"
 
-#, fuzzy
-msgid "Use internal &editor (mcedit)"
+msgid "Use internal edi&t"
 msgstr "Встроенный &редактор"
 
 msgid "Use internal vie&w"
@@ -2263,8 +2234,7 @@ msgstr "Верх иерархии каталога"
 msgid "Inode uses extents"
 msgstr "Узел ФС использует экстенты"
 
-#, fuzzy
-msgid "Huge file"
+msgid "Huge_file"
 msgstr "Огромный_файл"
 
 msgid "No COW"
@@ -2457,6 +2427,12 @@ msgstr "Создать новый каталог"
 
 msgid "Enter directory name:"
 msgstr "Введите имя каталога:"
+
+#, fuzzy, c-format
+msgid ""
+"Cannot create directory\n"
+"%s"
+msgstr "Не удалось создать каталог \"%s\""
 
 msgid "Extension file edit"
 msgstr "Редактирование файла расширений"
@@ -3171,9 +3147,6 @@ msgstr "Инфо&рмация"
 msgid "&Tree"
 msgstr "&Дерево"
 
-msgid "Paneli&ze"
-msgstr "Па&нелизация"
-
 msgid "&Listing format..."
 msgstr "Фор&мат списка..."
 
@@ -3194,6 +3167,9 @@ msgstr "S&hell-соединение..."
 
 msgid "SFTP li&nk..."
 msgstr "SFTP-соед&инение..."
+
+msgid "Paneli&ze"
+msgstr "Па&нелизация"
 
 msgid "&Rescan"
 msgstr "&Обновить"
@@ -3658,19 +3634,11 @@ msgstr "&Заголовок xterm"
 msgid "&Show free space"
 msgstr "Сво&бодное место"
 
-#, fuzzy
-msgid "&Dynamic file list"
-msgstr "&Расширенный"
-
 msgid "Panel split"
 msgstr "Разбиение панелей"
 
 msgid "Console output"
 msgstr "Консольный вывод"
-
-#, fuzzy
-msgid "Dynamic file list"
-msgstr "&Расширенный"
 
 msgid "&Vertical"
 msgstr "&Вертикальное"
@@ -3680,9 +3648,6 @@ msgstr "&Горизонтальное"
 
 msgid "Output lines:"
 msgstr "Строки вывода:"
-
-msgid "Debounce (sec):"
-msgstr ""
 
 msgid "Layout"
 msgstr "Внешний вид"
@@ -4863,28 +4828,6 @@ msgstr "Продолжить с начала?"
 
 msgid "Cannot fetch a local copy of /ftp://some.host/editme.txt"
 msgstr "Не удалось получить локальную копию /ftp://some.host/editme.txt"
-
-#, c-format
-#~ msgid ""
-#~ "Unable to use '%s' skin with 256 colors support\n"
-#~ "on non-256 colors terminal.\n"
-#~ "Default skin has been loaded"
-#~ msgstr ""
-#~ "Нельзя использовать скин \"%s\" с 256 цветами,\n"
-#~ "на терминале без поддержки 256 цветов.\n"
-#~ "Используется скин по умолчанию"
-
-#~ msgid "True color not supported with ncurses."
-#~ msgstr "True Color не поддерживается ncurses."
-
-#~ msgid "Your terminal doesn't even seem to support 256 colors."
-#~ msgstr "Похоже, ваш терминал не поддерживает даже 256 цветов."
-
-#~ msgid ""
-#~ "Set COLORTERM=truecolor if your terminal really supports true colors."
-#~ msgstr ""
-#~ "Установите COLORTERM=truecolor, если ваш терминал действительно "
-#~ "поддерживает True Color."
 
 #~ msgid "&Cancel quit"
 #~ msgstr "&Отменить выход"

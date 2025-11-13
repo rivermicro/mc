@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Midnight Commander\n"
 "Report-Msgid-Bugs-To: https://github.com/MidnightCommander/mc/issues\n"
-"POT-Creation-Date: 2025-11-13 12:28-0800\n"
+"POT-Creation-Date: 2025-06-19 21:07+0300\n"
 "PO-Revision-Date: 2010-12-29 10:19+0000\n"
 "Last-Translator: Yury V. Zaytsev <yury@shurup.com>, 2025\n"
 "Language-Team: Catalan (http://app.transifex.com/mc/mc/language/ca/)\n"
@@ -168,47 +168,28 @@ msgstr ""
 "%s\n"
 "S'ha carregat el predeterminat"
 
-#, fuzzy, c-format
+#, c-format
 msgid ""
-"Unable to use '%s' skin with 256 colors support:\n"
-"%s\n"
+"Unable to use '%s' skin with 256 colors support\n"
+"on non-256 colors terminal.\n"
 "Default skin has been loaded"
 msgstr ""
-"No es pot usar el tema «%s» amb suport de colors vertaders:\n"
-"%s\n"
-"S'ha carregat el predeterminat"
+"No es pot usar el tema «%s» amb suport\n"
+"de 256 colors en un terminal de no-256 colors.\n"
+"S'ha carregat el tema predeterminat"
 
-msgid ""
-"\n"
-"If your terminal supports 256 colors, you need to set your TERM\n"
-"environment variable to match your terminal, perhaps using\n"
-"a *-256color or *-direct256 variant. Use the 'toe -a'\n"
-"command to list all available variants on your system.\n"
-msgstr ""
+msgid "True color not supported with ncurses."
+msgstr "El color veritable no està admès amb «ncurses»."
 
-msgid ""
-"For true color support, you need version 6.1 or later of the ncurses\n"
-"library with wide character and ABI 6 or higher support.\n"
-"Please upgrade your system.\n"
-msgstr ""
-
-msgid ""
-"\n"
-"If your terminal supports true colors, you need to set your TERM\n"
-"environment variable to a *-direct256, *-direct16, or *-direct variant.\n"
-"Use the 'toe -a' command to list all available variants on your system.\n"
-msgstr ""
+msgid "Your terminal doesn't even seem to support 256 colors."
+msgstr "El terminal no sembla admetre 256 colors."
 
 msgid "True color not supported in this slang version."
 msgstr "El color veritable no està admès en aquesta versió de «slang»."
 
-msgid ""
-"\n"
-"If your terminal supports true colors, you need to set your TERM\n"
-"environment variable to a *-direct256, *-direct16, or *-direct variant.\n"
-"Use the 'toe -a' command to list all available variants on your system.\n"
-"Alternatively, you can set COLORTERM=truecolor.\n"
+msgid "Set COLORTERM=truecolor if your terminal really supports true colors."
 msgstr ""
+"Establiu COLORTERM=truecolor si el terminal realment admet colors veritables."
 
 msgid "Escape"
 msgstr "Esc"
@@ -1125,12 +1106,6 @@ msgstr "Canvia els salts de línia a:"
 msgid "Save As"
 msgstr "Desa com a"
 
-#, fuzzy, c-format
-msgid ""
-"Cannot create directory\n"
-"%s"
-msgstr "No s'ha pogut crear el directori %s"
-
 msgid "&Quick save"
 msgstr "Desament &ràpid"
 
@@ -1910,10 +1885,6 @@ msgstr "Pàgina de codis d'entrada / pantalla:"
 msgid "Selected source (file I/O) codepage"
 msgstr ""
 
-#, fuzzy, c-format
-msgid "Copyright (C) 2025-%d River Microelectronics"
-msgstr "Copyright (C) 1996-2025 la Free Software Foundation"
-
 msgid "Classic terminal file manager inspired by Norton Commander."
 msgstr ""
 
@@ -1956,8 +1927,7 @@ msgstr "Temps d'espera:"
 msgid "Pause after run"
 msgstr "Pausa després d'executar"
 
-#, fuzzy
-msgid "Use internal &editor (mcedit)"
+msgid "Use internal edi&t"
 msgstr "Fes servir l'&editor intern"
 
 msgid "Use internal vie&w"
@@ -2254,8 +2224,7 @@ msgstr "Començament de les jerarquies de directori"
 msgid "Inode uses extents"
 msgstr "El node-i usa extensions"
 
-#, fuzzy
-msgid "Huge file"
+msgid "Huge_file"
 msgstr "Fitxer_enorme"
 
 msgid "No COW"
@@ -2448,6 +2417,12 @@ msgstr "Crea un directori nou"
 
 msgid "Enter directory name:"
 msgstr "Introduïu el nom del directori:"
+
+#, fuzzy, c-format
+msgid ""
+"Cannot create directory\n"
+"%s"
+msgstr "No s'ha pogut crear el directori %s"
 
 msgid "Extension file edit"
 msgstr "Edita el fitxer d'extensions"
@@ -3162,9 +3137,6 @@ msgstr "&Informació"
 msgid "&Tree"
 msgstr "Ar&bre"
 
-msgid "Paneli&ze"
-msgstr "&Quadre de cerca"
-
 msgid "&Listing format..."
 msgstr "Format del &llistat..."
 
@@ -3185,6 +3157,9 @@ msgstr "Enllaç per a l'i&ntèrpret..."
 
 msgid "SFTP li&nk..."
 msgstr "E&nllaç SFTP..."
+
+msgid "Paneli&ze"
+msgstr "&Quadre de cerca"
 
 msgid "&Rescan"
 msgstr "To&rna a escanejar"
@@ -3643,19 +3618,11 @@ msgstr "Títol de la finestra &XTerm"
 msgid "&Show free space"
 msgstr "Mostra l'es&pai lliure"
 
-#, fuzzy
-msgid "&Dynamic file list"
-msgstr "Llistat &llarg de fitxers"
-
 msgid "Panel split"
 msgstr "Separa els plafons"
 
 msgid "Console output"
 msgstr "Sortida de la consola"
-
-#, fuzzy
-msgid "Dynamic file list"
-msgstr "Llistat &llarg de fitxers"
 
 msgid "&Vertical"
 msgstr "&Vertical"
@@ -3665,9 +3632,6 @@ msgstr "&Horitzontal"
 
 msgid "Output lines:"
 msgstr "Línies de la sortida:"
-
-msgid "Debounce (sec):"
-msgstr ""
 
 msgid "Layout"
 msgstr "Disposició"
@@ -4859,28 +4823,6 @@ msgstr "Voleu continuar des del començament?"
 msgid "Cannot fetch a local copy of /ftp://some.host/editme.txt"
 msgstr ""
 "No s'ha pogut obtenir una còpia local de /ftp://algun.amfitrió/editam.txt"
-
-#, c-format
-#~ msgid ""
-#~ "Unable to use '%s' skin with 256 colors support\n"
-#~ "on non-256 colors terminal.\n"
-#~ "Default skin has been loaded"
-#~ msgstr ""
-#~ "No es pot usar el tema «%s» amb suport\n"
-#~ "de 256 colors en un terminal de no-256 colors.\n"
-#~ "S'ha carregat el tema predeterminat"
-
-#~ msgid "True color not supported with ncurses."
-#~ msgstr "El color veritable no està admès amb «ncurses»."
-
-#~ msgid "Your terminal doesn't even seem to support 256 colors."
-#~ msgstr "El terminal no sembla admetre 256 colors."
-
-#~ msgid ""
-#~ "Set COLORTERM=truecolor if your terminal really supports true colors."
-#~ msgstr ""
-#~ "Establiu COLORTERM=truecolor si el terminal realment admet colors "
-#~ "veritables."
 
 #~ msgid "&Cancel quit"
 #~ msgstr "&Cancel·la la sortida"

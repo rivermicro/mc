@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Midnight Commander\n"
 "Report-Msgid-Bugs-To: https://github.com/MidnightCommander/mc/issues\n"
-"POT-Creation-Date: 2025-11-13 12:28-0800\n"
+"POT-Creation-Date: 2025-06-19 21:07+0300\n"
 "PO-Revision-Date: 2010-12-29 10:19+0000\n"
 "Last-Translator: Yury V. Zaytsev <yury@shurup.com>, 2025\n"
 "Language-Team: Italian (http://app.transifex.com/mc/mc/language/it/)\n"
@@ -165,47 +165,27 @@ msgstr ""
 "%s\n"
 "È stato caricato il tema predefinito"
 
-#, fuzzy, c-format
+#, c-format
 msgid ""
-"Unable to use '%s' skin with 256 colors support:\n"
-"%s\n"
+"Unable to use '%s' skin with 256 colors support\n"
+"on non-256 colors terminal.\n"
 "Default skin has been loaded"
 msgstr ""
-"Non posso usare il tema \"%s\" con supporto true color:\n"
-"%s\n"
+"Non posso usare il tema \"%s\" con supporto a 256\n"
+"colori su terminale non a 256 colori.\n"
 "È stato caricato il tema predefinito"
 
-msgid ""
-"\n"
-"If your terminal supports 256 colors, you need to set your TERM\n"
-"environment variable to match your terminal, perhaps using\n"
-"a *-256color or *-direct256 variant. Use the 'toe -a'\n"
-"command to list all available variants on your system.\n"
-msgstr ""
+msgid "True color not supported with ncurses."
+msgstr "True color non supportato con ncurses."
 
-msgid ""
-"For true color support, you need version 6.1 or later of the ncurses\n"
-"library with wide character and ABI 6 or higher support.\n"
-"Please upgrade your system.\n"
-msgstr ""
-
-msgid ""
-"\n"
-"If your terminal supports true colors, you need to set your TERM\n"
-"environment variable to a *-direct256, *-direct16, or *-direct variant.\n"
-"Use the 'toe -a' command to list all available variants on your system.\n"
-msgstr ""
+msgid "Your terminal doesn't even seem to support 256 colors."
+msgstr "Il terminale non sembra supportare neanche 256 colori."
 
 msgid "True color not supported in this slang version."
 msgstr "True color non supportato in questa versione di slang."
 
-msgid ""
-"\n"
-"If your terminal supports true colors, you need to set your TERM\n"
-"environment variable to a *-direct256, *-direct16, or *-direct variant.\n"
-"Use the 'toe -a' command to list all available variants on your system.\n"
-"Alternatively, you can set COLORTERM=truecolor.\n"
-msgstr ""
+msgid "Set COLORTERM=truecolor if your terminal really supports true colors."
+msgstr "Impostare COLORTERM=truecolor se il terminale supporta il true color."
 
 msgid "Escape"
 msgstr "Escape "
@@ -1115,12 +1095,6 @@ msgstr "Cambia ritorno a capo a:"
 msgid "Save As"
 msgstr "Salva come"
 
-#, fuzzy, c-format
-msgid ""
-"Cannot create directory\n"
-"%s"
-msgstr "Non posso creare la directory %s"
-
 msgid "&Quick save"
 msgstr "Salva &veloce"
 
@@ -1898,10 +1872,6 @@ msgstr "Ingresso / mostra codepage:"
 msgid "Selected source (file I/O) codepage"
 msgstr ""
 
-#, fuzzy, c-format
-msgid "Copyright (C) 2025-%d River Microelectronics"
-msgstr "Copyright (C) 1996-2025 the Free Software Foundation"
-
 msgid "Classic terminal file manager inspired by Norton Commander."
 msgstr ""
 
@@ -1944,8 +1914,7 @@ msgstr "Timeout:"
 msgid "Pause after run"
 msgstr " Pausa dopo l'esecuzione"
 
-#, fuzzy
-msgid "Use internal &editor (mcedit)"
+msgid "Use internal edi&t"
 msgstr "Usa &editor interno"
 
 msgid "Use internal vie&w"
@@ -2243,8 +2212,7 @@ msgstr "Gerarchie top directory"
 msgid "Inode uses extents"
 msgstr "Inode usa gli extents"
 
-#, fuzzy
-msgid "Huge file"
+msgid "Huge_file"
 msgstr "File_enorme"
 
 msgid "No COW"
@@ -2437,6 +2405,12 @@ msgstr "Crea una nuova directory"
 
 msgid "Enter directory name:"
 msgstr "Inserire nome directory:"
+
+#, fuzzy, c-format
+msgid ""
+"Cannot create directory\n"
+"%s"
+msgstr "Non posso creare la directory %s"
 
 msgid "Extension file edit"
 msgstr "Modifica file delle estensioni"
@@ -3150,9 +3124,6 @@ msgstr "&Info"
 msgid "&Tree"
 msgstr "A&lbero"
 
-msgid "Paneli&ze"
-msgstr "Pannelli&zza"
-
 msgid "&Listing format..."
 msgstr "Formato &lista..."
 
@@ -3173,6 +3144,9 @@ msgstr "Connessione S&hell..."
 
 msgid "SFTP li&nk..."
 msgstr "Co&ll. SFTP..."
+
+msgid "Paneli&ze"
+msgstr "Pannelli&zza"
 
 msgid "&Rescan"
 msgstr "&Ricarica"
@@ -3634,19 +3608,11 @@ msgstr "Titolo finestra &xterm"
 msgid "&Show free space"
 msgstr "Mostra &spazio libero"
 
-#, fuzzy
-msgid "&Dynamic file list"
-msgstr "Lista file &lunga"
-
 msgid "Panel split"
 msgstr "Divisione pannello"
 
 msgid "Console output"
 msgstr "Risultato a console"
-
-#, fuzzy
-msgid "Dynamic file list"
-msgstr "Lista file &lunga"
 
 msgid "&Vertical"
 msgstr "&Verticale"
@@ -3656,9 +3622,6 @@ msgstr "Orizzontal&e"
 
 msgid "Output lines:"
 msgstr "Righe d'uscita:"
-
-msgid "Debounce (sec):"
-msgstr ""
 
 msgid "Layout"
 msgstr "Disposizione"
@@ -4836,27 +4799,6 @@ msgstr "Continuare dall'inizio?"
 
 msgid "Cannot fetch a local copy of /ftp://some.host/editme.txt"
 msgstr "Non posso ricevere copia locale di /ftp://un.host/modificami.txt"
-
-#, c-format
-#~ msgid ""
-#~ "Unable to use '%s' skin with 256 colors support\n"
-#~ "on non-256 colors terminal.\n"
-#~ "Default skin has been loaded"
-#~ msgstr ""
-#~ "Non posso usare il tema \"%s\" con supporto a 256\n"
-#~ "colori su terminale non a 256 colori.\n"
-#~ "È stato caricato il tema predefinito"
-
-#~ msgid "True color not supported with ncurses."
-#~ msgstr "True color non supportato con ncurses."
-
-#~ msgid "Your terminal doesn't even seem to support 256 colors."
-#~ msgstr "Il terminale non sembra supportare neanche 256 colori."
-
-#~ msgid ""
-#~ "Set COLORTERM=truecolor if your terminal really supports true colors."
-#~ msgstr ""
-#~ "Impostare COLORTERM=truecolor se il terminale supporta il true color."
 
 #~ msgid "&Cancel quit"
 #~ msgstr "Annulla l'us&cita"

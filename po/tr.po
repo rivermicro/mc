@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Midnight Commander\n"
 "Report-Msgid-Bugs-To: https://github.com/MidnightCommander/mc/issues\n"
-"POT-Creation-Date: 2025-11-13 12:28-0800\n"
+"POT-Creation-Date: 2025-06-19 21:07+0300\n"
 "PO-Revision-Date: 2010-12-29 10:19+0000\n"
 "Last-Translator: Yury V. Zaytsev <yury@shurup.com>, 2025\n"
 "Language-Team: Turkish (http://app.transifex.com/mc/mc/language/tr/)\n"
@@ -165,47 +165,28 @@ msgstr ""
 "%s\n"
 "Varsayılan skin yüklendi"
 
-#, fuzzy, c-format
+#, c-format
 msgid ""
-"Unable to use '%s' skin with 256 colors support:\n"
-"%s\n"
+"Unable to use '%s' skin with 256 colors support\n"
+"on non-256 colors terminal.\n"
 "Default skin has been loaded"
 msgstr ""
-"Gerçek renkler desteğiyle '%s' skin kullanılamıyor:\n"
-"%s\n"
-"Varsayılan skin yüklendi"
+"'%s' önyüzü, 256 renk olmayan terminal üzerinde\n"
+"256 renk desteği ile kullanılamıyor.\n"
+"Varsayılan önyüz yüklendi"
 
-msgid ""
-"\n"
-"If your terminal supports 256 colors, you need to set your TERM\n"
-"environment variable to match your terminal, perhaps using\n"
-"a *-256color or *-direct256 variant. Use the 'toe -a'\n"
-"command to list all available variants on your system.\n"
-msgstr ""
+msgid "True color not supported with ncurses."
+msgstr "Gerçek renk ncurses ile desteklenmiyor."
 
-msgid ""
-"For true color support, you need version 6.1 or later of the ncurses\n"
-"library with wide character and ABI 6 or higher support.\n"
-"Please upgrade your system.\n"
-msgstr ""
-
-msgid ""
-"\n"
-"If your terminal supports true colors, you need to set your TERM\n"
-"environment variable to a *-direct256, *-direct16, or *-direct variant.\n"
-"Use the 'toe -a' command to list all available variants on your system.\n"
-msgstr ""
+msgid "Your terminal doesn't even seem to support 256 colors."
+msgstr "Uçbiriminiz 256 rengi bile desteklemiyor gibi görünüyor."
 
 msgid "True color not supported in this slang version."
 msgstr "Gerçek renk bu slang sürümünde desteklenmiyor."
 
-msgid ""
-"\n"
-"If your terminal supports true colors, you need to set your TERM\n"
-"environment variable to a *-direct256, *-direct16, or *-direct variant.\n"
-"Use the 'toe -a' command to list all available variants on your system.\n"
-"Alternatively, you can set COLORTERM=truecolor.\n"
+msgid "Set COLORTERM=truecolor if your terminal really supports true colors."
 msgstr ""
+"Uçbirim gerçek renkleri destekliyorsa COLORTERM=truecolor olarak ayarlayın."
 
 msgid "Escape"
 msgstr "Vazgeç"
@@ -1091,12 +1072,6 @@ msgstr "Satır sonu şunla değiştiriliyor:"
 msgid "Save As"
 msgstr "Farklı kaydet..."
 
-#, fuzzy, c-format
-msgid ""
-"Cannot create directory\n"
-"%s"
-msgstr "Dizin %s oluşturulamıyor"
-
 msgid "&Quick save"
 msgstr "&Çabuk kaydet"
 
@@ -1880,10 +1855,6 @@ msgstr "Girdi / gösterme karakter kümesi:"
 msgid "Selected source (file I/O) codepage"
 msgstr ""
 
-#, c-format
-msgid "Copyright (C) 2025-%d River Microelectronics"
-msgstr ""
-
 msgid "Classic terminal file manager inspired by Norton Commander."
 msgstr ""
 
@@ -1926,8 +1897,7 @@ msgstr "Zaman Aşımı:"
 msgid "Pause after run"
 msgstr "Çalıştırdıktan sonra beklet"
 
-#, fuzzy
-msgid "Use internal &editor (mcedit)"
+msgid "Use internal edi&t"
 msgstr "kendi dü&zenleyicisini kullan"
 
 msgid "Use internal vie&w"
@@ -2224,8 +2194,7 @@ msgstr "En üstteki dizin hiyerarşisi"
 msgid "Inode uses extents"
 msgstr "Inode uzantıları kullanır"
 
-#, fuzzy
-msgid "Huge file"
+msgid "Huge_file"
 msgstr "Büyük_dosya"
 
 msgid "No COW"
@@ -2416,6 +2385,12 @@ msgstr "Yeni bir dizin Oluştur"
 
 msgid "Enter directory name:"
 msgstr "Dizin ismi Gir:"
+
+#, fuzzy, c-format
+msgid ""
+"Cannot create directory\n"
+"%s"
+msgstr "Dizin %s oluşturulamıyor"
 
 msgid "Extension file edit"
 msgstr "Uzantı dosyası düzenleme"
@@ -3115,9 +3090,6 @@ msgstr "&Bilgi kipi"
 msgid "&Tree"
 msgstr "&Ağaç"
 
-msgid "Paneli&ze"
-msgstr "Pane&lle"
-
 msgid "&Listing format..."
 msgstr "&Listeleme biçimi..."
 
@@ -3138,6 +3110,9 @@ msgstr "&SSH bağı..."
 
 msgid "SFTP li&nk..."
 msgstr ""
+
+msgid "Paneli&ze"
+msgstr "Pane&lle"
 
 msgid "&Rescan"
 msgstr "&Tazele"
@@ -3596,19 +3571,11 @@ msgstr "&Xterm pencere başlığı"
 msgid "&Show free space"
 msgstr "&boş &alanı göster"
 
-#, fuzzy
-msgid "&Dynamic file list"
-msgstr "&Uzun dosya listesi"
-
 msgid "Panel split"
 msgstr "Panel bölüşümü"
 
 msgid "Console output"
 msgstr "Konsol çıktısı"
-
-#, fuzzy
-msgid "Dynamic file list"
-msgstr "&Uzun dosya listesi"
 
 msgid "&Vertical"
 msgstr "Di&key"
@@ -3618,9 +3585,6 @@ msgstr "&Yatay"
 
 msgid "Output lines:"
 msgstr "çıktı satırları:"
-
-msgid "Debounce (sec):"
-msgstr ""
 
 msgid "Layout"
 msgstr "Yerleşim"
@@ -4760,28 +4724,6 @@ msgstr "Başından devam edilsin mi?"
 
 msgid "Cannot fetch a local copy of /ftp://some.host/editme.txt"
 msgstr " /ftp://some.host/editme.txt 'in yerel kopyası alınamadı"
-
-#, c-format
-#~ msgid ""
-#~ "Unable to use '%s' skin with 256 colors support\n"
-#~ "on non-256 colors terminal.\n"
-#~ "Default skin has been loaded"
-#~ msgstr ""
-#~ "'%s' önyüzü, 256 renk olmayan terminal üzerinde\n"
-#~ "256 renk desteği ile kullanılamıyor.\n"
-#~ "Varsayılan önyüz yüklendi"
-
-#~ msgid "True color not supported with ncurses."
-#~ msgstr "Gerçek renk ncurses ile desteklenmiyor."
-
-#~ msgid "Your terminal doesn't even seem to support 256 colors."
-#~ msgstr "Uçbiriminiz 256 rengi bile desteklemiyor gibi görünüyor."
-
-#~ msgid ""
-#~ "Set COLORTERM=truecolor if your terminal really supports true colors."
-#~ msgstr ""
-#~ "Uçbirim gerçek renkleri destekliyorsa COLORTERM=truecolor olarak "
-#~ "ayarlayın."
 
 #~ msgid "&Cancel quit"
 #~ msgstr "&Çıkışı durdur"

@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Midnight Commander\n"
 "Report-Msgid-Bugs-To: https://github.com/MidnightCommander/mc/issues\n"
-"POT-Creation-Date: 2025-11-13 12:28-0800\n"
+"POT-Creation-Date: 2025-06-19 21:07+0300\n"
 "PO-Revision-Date: 2010-12-29 10:19+0000\n"
 "Last-Translator: Yury V. Zaytsev <yury@shurup.com>, 2019,2025\n"
 "Language-Team: Belarusian (http://app.transifex.com/mc/mc/language/be/)\n"
@@ -173,47 +173,29 @@ msgstr ""
 "%s\n"
 "Будзе загружана прадвызначаная абалонка"
 
-#, fuzzy, c-format
+#, c-format
 msgid ""
-"Unable to use '%s' skin with 256 colors support:\n"
-"%s\n"
+"Unable to use '%s' skin with 256 colors support\n"
+"on non-256 colors terminal.\n"
 "Default skin has been loaded"
 msgstr ""
-"Немагчыма выкарыстаць графічную абалонку \"%s\" з падтрымкай колераў:\n"
-"%s\n"
+"Немагчыма выкарыстаць графічную абалонку \"%s\" з падтрымкай 256 колераў,\n"
+"тэрмінал не падтрымлівае столькі.\n"
 "Будзе загружана прадвызначаная абалонка"
 
-msgid ""
-"\n"
-"If your terminal supports 256 colors, you need to set your TERM\n"
-"environment variable to match your terminal, perhaps using\n"
-"a *-256color or *-direct256 variant. Use the 'toe -a'\n"
-"command to list all available variants on your system.\n"
-msgstr ""
+msgid "True color not supported with ncurses."
+msgstr "Колеры не падтрымліваюцца ncurses."
 
-msgid ""
-"For true color support, you need version 6.1 or later of the ncurses\n"
-"library with wide character and ABI 6 or higher support.\n"
-"Please upgrade your system.\n"
-msgstr ""
-
-msgid ""
-"\n"
-"If your terminal supports true colors, you need to set your TERM\n"
-"environment variable to a *-direct256, *-direct16, or *-direct variant.\n"
-"Use the 'toe -a' command to list all available variants on your system.\n"
-msgstr ""
+msgid "Your terminal doesn't even seem to support 256 colors."
+msgstr "Здаецца, ваш тэрмінал не падтрымлівае 256 колераў."
 
 msgid "True color not supported in this slang version."
 msgstr "True color не падтрымліваецца ў гэтай версіі slang."
 
-msgid ""
-"\n"
-"If your terminal supports true colors, you need to set your TERM\n"
-"environment variable to a *-direct256, *-direct16, or *-direct variant.\n"
-"Use the 'toe -a' command to list all available variants on your system.\n"
-"Alternatively, you can set COLORTERM=truecolor.\n"
+msgid "Set COLORTERM=truecolor if your terminal really supports true colors."
 msgstr ""
+"Вызначце COLORTERM=truecolor, калі ваш тэрмінал сапраўды падтрымлівае true "
+"color."
 
 msgid "Escape"
 msgstr "Escape"
@@ -1126,12 +1108,6 @@ msgstr "Змяніць пераводы радкоў на:"
 msgid "Save As"
 msgstr "Захаваць як"
 
-#, fuzzy, c-format
-msgid ""
-"Cannot create directory\n"
-"%s"
-msgstr "Немагчыма стварыць каталог \"%s\""
-
 msgid "&Quick save"
 msgstr "Хуткае захаванне(&Q)"
 
@@ -1909,10 +1885,6 @@ msgstr "Кадаванне ўводу/вываду:"
 msgid "Selected source (file I/O) codepage"
 msgstr ""
 
-#, c-format
-msgid "Copyright (C) 2025-%d River Microelectronics"
-msgstr ""
-
 msgid "Classic terminal file manager inspired by Norton Commander."
 msgstr ""
 
@@ -1955,8 +1927,7 @@ msgstr "Затрымліванне:"
 msgid "Pause after run"
 msgstr "Прыпыніць пасля запуску"
 
-#, fuzzy
-msgid "Use internal &editor (mcedit)"
+msgid "Use internal edi&t"
 msgstr "Выкарыстоўваць убудаваны рэдактар(&T)"
 
 msgid "Use internal vie&w"
@@ -2253,8 +2224,7 @@ msgstr "Верхні ўзровень іерархіі каталогаў"
 msgid "Inode uses extents"
 msgstr "Inode выкарыстоўвае экстэнты"
 
-#, fuzzy
-msgid "Huge file"
+msgid "Huge_file"
 msgstr "Вялізны_файл"
 
 msgid "No COW"
@@ -2445,6 +2415,12 @@ msgstr "Стварыць каталог"
 
 msgid "Enter directory name:"
 msgstr "Увядзіце назву каталога:"
+
+#, fuzzy, c-format
+msgid ""
+"Cannot create directory\n"
+"%s"
+msgstr "Немагчыма стварыць каталог \"%s\""
 
 msgid "Extension file edit"
 msgstr "Рэдагаваць файл пашырэння"
@@ -3153,9 +3129,6 @@ msgstr "Інфармацыя(&I)"
 msgid "&Tree"
 msgstr "Дрэва(&T)"
 
-msgid "Paneli&ze"
-msgstr "На панэль(&Z)"
-
 msgid "&Listing format..."
 msgstr "Фармат спіса(&L)..."
 
@@ -3176,6 +3149,9 @@ msgstr "Падлучэнне з дапамогай абалонкі(&H)..."
 
 msgid "SFTP li&nk..."
 msgstr "Падлучэнне з дапамогай SFTP(&N)..."
+
+msgid "Paneli&ze"
+msgstr "На панэль(&Z)"
 
 msgid "&Rescan"
 msgstr "Перасканаваць(&R)"
@@ -3640,19 +3616,11 @@ msgstr "Загаловак акна &XTerm"
 msgid "&Show free space"
 msgstr "Паказваць вольнае месца(&S)"
 
-#, fuzzy
-msgid "&Dynamic file list"
-msgstr "Шырокі спіс(&L)"
-
 msgid "Panel split"
 msgstr "Падзяляць панэлі"
 
 msgid "Console output"
 msgstr "Вывад кансолі"
-
-#, fuzzy
-msgid "Dynamic file list"
-msgstr "Шырокі спіс(&L)"
 
 msgid "&Vertical"
 msgstr "Вертыкальна(&V)"
@@ -3662,9 +3630,6 @@ msgstr "Гарызантальна(&H)"
 
 msgid "Output lines:"
 msgstr "Колькасць радкоў вываду:"
-
-msgid "Debounce (sec):"
-msgstr ""
 
 msgid "Layout"
 msgstr "Макет"
@@ -4844,29 +4809,6 @@ msgstr "Працягваць ад пачатку?"
 
 msgid "Cannot fetch a local copy of /ftp://some.host/editme.txt"
 msgstr "Немагчыма атрымаць лакальную копію /ftp://some.host/editme.txt"
-
-#, c-format
-#~ msgid ""
-#~ "Unable to use '%s' skin with 256 colors support\n"
-#~ "on non-256 colors terminal.\n"
-#~ "Default skin has been loaded"
-#~ msgstr ""
-#~ "Немагчыма выкарыстаць графічную абалонку \"%s\" з падтрымкай 256 "
-#~ "колераў,\n"
-#~ "тэрмінал не падтрымлівае столькі.\n"
-#~ "Будзе загружана прадвызначаная абалонка"
-
-#~ msgid "True color not supported with ncurses."
-#~ msgstr "Колеры не падтрымліваюцца ncurses."
-
-#~ msgid "Your terminal doesn't even seem to support 256 colors."
-#~ msgstr "Здаецца, ваш тэрмінал не падтрымлівае 256 колераў."
-
-#~ msgid ""
-#~ "Set COLORTERM=truecolor if your terminal really supports true colors."
-#~ msgstr ""
-#~ "Вызначце COLORTERM=truecolor, калі ваш тэрмінал сапраўды падтрымлівае "
-#~ "true color."
 
 #~ msgid "&Cancel quit"
 #~ msgstr "Не выходзіць(&С)"

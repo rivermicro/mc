@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Midnight Commander\n"
 "Report-Msgid-Bugs-To: https://github.com/MidnightCommander/mc/issues\n"
-"POT-Creation-Date: 2025-11-13 11:58-0800\n"
+"POT-Creation-Date: 2025-06-19 21:07+0300\n"
 "PO-Revision-Date: 2010-12-29 10:19+0000\n"
 "Last-Translator: Yury V. Zaytsev <yury@shurup.com>, 2025\n"
 "Language-Team: Serbian (http://app.transifex.com/mc/mc/language/sr/)\n"
@@ -18,8 +18,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #, fuzzy
 msgid "No translation"
@@ -153,46 +153,26 @@ msgid ""
 "Default skin has been loaded"
 msgstr ""
 
-#, fuzzy, c-format
+#, c-format
 msgid ""
-"Unable to use '%s' skin with 256 colors support:\n"
-"%s\n"
+"Unable to use '%s' skin with 256 colors support\n"
+"on non-256 colors terminal.\n"
 "Default skin has been loaded"
 msgstr ""
 "Не могу да користим маску „%s“ са подршком за 256 боја\n"
 "на терминалу који нема 256 боја.\n"
 "Учитана је основна маска."
 
-msgid ""
-"\n"
-"If your terminal supports 256 colors, you need to set your TERM\n"
-"environment variable to match your terminal, perhaps using\n"
-"a *-256color or *-direct256 variant. Use the 'toe -a'\n"
-"command to list all available variants on your system.\n"
+msgid "True color not supported with ncurses."
 msgstr ""
 
-msgid ""
-"For true color support, you need version 6.1 or later of the ncurses\n"
-"library with wide character and ABI 6 or higher support.\n"
-"Please upgrade your system.\n"
-msgstr ""
-
-msgid ""
-"\n"
-"If your terminal supports true colors, you need to set your TERM\n"
-"environment variable to a *-direct256, *-direct16, or *-direct variant.\n"
-"Use the 'toe -a' command to list all available variants on your system.\n"
+msgid "Your terminal doesn't even seem to support 256 colors."
 msgstr ""
 
 msgid "True color not supported in this slang version."
 msgstr ""
 
-msgid ""
-"\n"
-"If your terminal supports true colors, you need to set your TERM\n"
-"environment variable to a *-direct256, *-direct16, or *-direct variant.\n"
-"Use the 'toe -a' command to list all available variants on your system.\n"
-"Alternatively, you can set COLORTERM=truecolor.\n"
+msgid "Set COLORTERM=truecolor if your terminal really supports true colors."
 msgstr ""
 
 msgid "Escape"
@@ -1073,12 +1053,6 @@ msgstr "Измени преломе редова на:"
 msgid "Save As"
 msgstr "Сачувај као"
 
-#, fuzzy, c-format
-msgid ""
-"Cannot create directory\n"
-"%s"
-msgstr "Не могу да направим директоријум „%s“"
-
 msgid "&Quick save"
 msgstr "&Брзо сачувај"
 
@@ -1854,10 +1828,6 @@ msgstr "Кодна страна улаза и приказа:"
 msgid "Selected source (file I/O) codepage"
 msgstr ""
 
-#, c-format
-msgid "Copyright (C) 2025-%d River Microelectronics"
-msgstr ""
-
 msgid "Classic terminal file manager inspired by Norton Commander."
 msgstr ""
 
@@ -1900,8 +1870,7 @@ msgstr "Време:"
 msgid "Pause after run"
 msgstr "Паузирај након извршавања"
 
-#, fuzzy
-msgid "Use internal &editor (mcedit)"
+msgid "Use internal edi&t"
 msgstr "Користи унутрашњи &уређивач"
 
 msgid "Use internal vie&w"
@@ -2197,9 +2166,8 @@ msgstr ""
 msgid "Inode uses extents"
 msgstr ""
 
-#, fuzzy
-msgid "Huge file"
-msgstr "Сачувај датотеку"
+msgid "Huge_file"
+msgstr ""
 
 msgid "No COW"
 msgstr ""
@@ -2389,6 +2357,12 @@ msgstr "Направите нови директоријум"
 
 msgid "Enter directory name:"
 msgstr "Унесите назив директоријума:"
+
+#, fuzzy, c-format
+msgid ""
+"Cannot create directory\n"
+"%s"
+msgstr "Не могу да направим директоријум „%s“"
 
 msgid "Extension file edit"
 msgstr "Уређивање датотеке проширења"
@@ -3085,9 +3059,6 @@ msgstr "&Подаци"
 msgid "&Tree"
 msgstr "&Стабло"
 
-msgid "Paneli&ze"
-msgstr "Претвори &у окно"
-
 msgid "&Listing format..."
 msgstr ""
 
@@ -3108,6 +3079,9 @@ msgstr "Веза &љуске..."
 
 msgid "SFTP li&nk..."
 msgstr ""
+
+msgid "Paneli&ze"
+msgstr "Претвори &у окно"
 
 msgid "&Rescan"
 msgstr "&Поново прегледај"
@@ -3569,19 +3543,11 @@ msgstr "Наслов прозора &Хтерминала"
 msgid "&Show free space"
 msgstr "&Покажи слободан простор"
 
-#, fuzzy
-msgid "&Dynamic file list"
-msgstr "&Дуг списак датотека"
-
 msgid "Panel split"
 msgstr "Подела панела"
 
 msgid "Console output"
 msgstr "Излаз конзоле"
-
-#, fuzzy
-msgid "Dynamic file list"
-msgstr "&Дуг списак датотека"
 
 msgid "&Vertical"
 msgstr "&Усправно"
@@ -3591,9 +3557,6 @@ msgstr "&Положено"
 
 msgid "Output lines:"
 msgstr "Излазни редови:"
-
-msgid "Debounce (sec):"
-msgstr ""
 
 msgid "Layout"
 msgstr "Распоред"

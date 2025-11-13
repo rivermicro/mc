@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Midnight Commander\n"
 "Report-Msgid-Bugs-To: https://github.com/MidnightCommander/mc/issues\n"
-"POT-Creation-Date: 2025-11-13 11:58-0800\n"
+"POT-Creation-Date: 2025-06-19 21:07+0300\n"
 "PO-Revision-Date: 2010-12-29 10:19+0000\n"
 "Last-Translator: Yury V. Zaytsev <yury@shurup.com>, 2025\n"
 "Language-Team: Chinese (China) (http://app.transifex.com/mc/mc/language/"
@@ -167,47 +167,27 @@ msgstr ""
 "%s\n"
 "已加载默认皮肤"
 
-#, fuzzy, c-format
+#, c-format
 msgid ""
-"Unable to use '%s' skin with 256 colors support:\n"
-"%s\n"
+"Unable to use '%s' skin with 256 colors support\n"
+"on non-256 colors terminal.\n"
 "Default skin has been loaded"
 msgstr ""
-"无法在支持真色彩的终端下使用皮肤“%s”：\n"
-"%s\n"
+"无法在非256色终端上使用\n"
+"支持256色的皮肤“%s”。\n"
 "已加载默认皮肤"
 
-msgid ""
-"\n"
-"If your terminal supports 256 colors, you need to set your TERM\n"
-"environment variable to match your terminal, perhaps using\n"
-"a *-256color or *-direct256 variant. Use the 'toe -a'\n"
-"command to list all available variants on your system.\n"
-msgstr ""
+msgid "True color not supported with ncurses."
+msgstr "ncurses 不支持真色彩模式"
 
-msgid ""
-"For true color support, you need version 6.1 or later of the ncurses\n"
-"library with wide character and ABI 6 or higher support.\n"
-"Please upgrade your system.\n"
-msgstr ""
-
-msgid ""
-"\n"
-"If your terminal supports true colors, you need to set your TERM\n"
-"environment variable to a *-direct256, *-direct16, or *-direct variant.\n"
-"Use the 'toe -a' command to list all available variants on your system.\n"
-msgstr ""
+msgid "Your terminal doesn't even seem to support 256 colors."
+msgstr "你的终端连 256 色都不支持"
 
 msgid "True color not supported in this slang version."
 msgstr "此 slang 版本不支持真色彩模式"
 
-msgid ""
-"\n"
-"If your terminal supports true colors, you need to set your TERM\n"
-"environment variable to a *-direct256, *-direct16, or *-direct variant.\n"
-"Use the 'toe -a' command to list all available variants on your system.\n"
-"Alternatively, you can set COLORTERM=truecolor.\n"
-msgstr ""
+msgid "Set COLORTERM=truecolor if your terminal really supports true colors."
+msgstr "如果你的终端真的支持真色彩的话，请设置环境变量 COLORTERM=truecolor"
 
 msgid "Escape"
 msgstr "ESC 键"
@@ -1086,12 +1066,6 @@ msgstr "更改换行符为: "
 msgid "Save As"
 msgstr "另存为"
 
-#, fuzzy, c-format
-msgid ""
-"Cannot create directory\n"
-"%s"
-msgstr "无法建立目录%s"
-
 msgid "&Quick save"
 msgstr "快速保存(&Q)"
 
@@ -1868,10 +1842,6 @@ msgstr "输入/显示代码页: "
 msgid "Selected source (file I/O) codepage"
 msgstr ""
 
-#, c-format
-msgid "Copyright (C) 2025-%d River Microelectronics"
-msgstr ""
-
 msgid "Classic terminal file manager inspired by Norton Commander."
 msgstr ""
 
@@ -1914,8 +1884,7 @@ msgstr "超时: "
 msgid "Pause after run"
 msgstr "运行后暂停"
 
-#, fuzzy
-msgid "Use internal &editor (mcedit)"
+msgid "Use internal edi&t"
 msgstr "使用内部编辑器(&T)"
 
 msgid "Use internal vie&w"
@@ -2210,9 +2179,8 @@ msgstr ""
 msgid "Inode uses extents"
 msgstr ""
 
-#, fuzzy
-msgid "Huge file"
-msgstr "保存文件"
+msgid "Huge_file"
+msgstr ""
 
 msgid "No COW"
 msgstr ""
@@ -2402,6 +2370,12 @@ msgstr "创建新目录"
 
 msgid "Enter directory name:"
 msgstr "输入目录名称: "
+
+#, fuzzy, c-format
+msgid ""
+"Cannot create directory\n"
+"%s"
+msgstr "无法建立目录%s"
 
 msgid "Extension file edit"
 msgstr "扩展文件编辑"
@@ -3099,9 +3073,6 @@ msgstr "信息(&I)"
 msgid "&Tree"
 msgstr "树(&T)"
 
-msgid "Paneli&ze"
-msgstr "面板化(&Z)"
-
 msgid "&Listing format..."
 msgstr "列表格式(&L)…"
 
@@ -3122,6 +3093,9 @@ msgstr "S&hell 链接..."
 
 msgid "SFTP li&nk..."
 msgstr ""
+
+msgid "Paneli&ze"
+msgstr "面板化(&Z)"
 
 msgid "&Rescan"
 msgstr "重新扫描(&R)"
@@ -3577,19 +3551,11 @@ msgstr "Xterm 窗口标题(&X)"
 msgid "&Show free space"
 msgstr "显示剩余空间(&S)"
 
-#, fuzzy
-msgid "&Dynamic file list"
-msgstr "长文件列表(&L)"
-
 msgid "Panel split"
 msgstr "分隔面板"
 
 msgid "Console output"
 msgstr "控制台输出"
-
-#, fuzzy
-msgid "Dynamic file list"
-msgstr "长文件列表(&L)"
 
 msgid "&Vertical"
 msgstr "垂直(&V)"
@@ -3599,9 +3565,6 @@ msgstr "水平(&H)"
 
 msgid "Output lines:"
 msgstr "输出行: "
-
-msgid "Debounce (sec):"
-msgstr ""
 
 msgid "Layout"
 msgstr "布局"
@@ -4738,26 +4701,6 @@ msgstr "从头继续搜索?"
 
 msgid "Cannot fetch a local copy of /ftp://some.host/editme.txt"
 msgstr "无法获取 /ftp://some.host/editme.txt 的本地副本"
-
-#, c-format
-#~ msgid ""
-#~ "Unable to use '%s' skin with 256 colors support\n"
-#~ "on non-256 colors terminal.\n"
-#~ "Default skin has been loaded"
-#~ msgstr ""
-#~ "无法在非256色终端上使用\n"
-#~ "支持256色的皮肤“%s”。\n"
-#~ "已加载默认皮肤"
-
-#~ msgid "True color not supported with ncurses."
-#~ msgstr "ncurses 不支持真色彩模式"
-
-#~ msgid "Your terminal doesn't even seem to support 256 colors."
-#~ msgstr "你的终端连 256 色都不支持"
-
-#~ msgid ""
-#~ "Set COLORTERM=truecolor if your terminal really supports true colors."
-#~ msgstr "如果你的终端真的支持真色彩的话，请设置环境变量 COLORTERM=truecolor"
 
 #~ msgid "&Cancel quit"
 #~ msgstr "取消退出(&C)"

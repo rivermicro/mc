@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Midnight Commander\n"
 "Report-Msgid-Bugs-To: https://github.com/MidnightCommander/mc/issues\n"
-"POT-Creation-Date: 2025-11-13 11:58-0800\n"
+"POT-Creation-Date: 2025-06-19 21:07+0300\n"
 "PO-Revision-Date: 2010-12-29 10:19+0000\n"
 "Last-Translator: Kimmo Kujansuu <mrkujansuu@gmail.com>, 2021\n"
 "Language-Team: Finnish (http://app.transifex.com/mc/mc/language/fi/)\n"
@@ -159,47 +159,28 @@ msgstr ""
 "%s\n"
 "Oletus ulkoasu on ladattu"
 
-#, fuzzy, c-format
+#, c-format
 msgid ""
-"Unable to use '%s' skin with 256 colors support:\n"
-"%s\n"
+"Unable to use '%s' skin with 256 colors support\n"
+"on non-256 colors terminal.\n"
 "Default skin has been loaded"
 msgstr ""
-"Ei voi käyttää '%s' ulkoasua täydellä värikartalla:\n"
-"%s\n"
+"Ei voi käyttää '%s' ulkoasua 256 värlillä\n"
+"terminaalissa joka ei tue värikarttaa-256\n"
 "Oletus ulkoasu on ladattu"
 
-msgid ""
-"\n"
-"If your terminal supports 256 colors, you need to set your TERM\n"
-"environment variable to match your terminal, perhaps using\n"
-"a *-256color or *-direct256 variant. Use the 'toe -a'\n"
-"command to list all available variants on your system.\n"
-msgstr ""
+msgid "True color not supported with ncurses."
+msgstr "Täyttä värikarttaa ei ncurses tue."
 
-msgid ""
-"For true color support, you need version 6.1 or later of the ncurses\n"
-"library with wide character and ABI 6 or higher support.\n"
-"Please upgrade your system.\n"
-msgstr ""
-
-msgid ""
-"\n"
-"If your terminal supports true colors, you need to set your TERM\n"
-"environment variable to a *-direct256, *-direct16, or *-direct variant.\n"
-"Use the 'toe -a' command to list all available variants on your system.\n"
-msgstr ""
+msgid "Your terminal doesn't even seem to support 256 colors."
+msgstr "Päätteesi ei näytä edes tukevan 256 värikarttaa."
 
 msgid "True color not supported in this slang version."
 msgstr "Täyttä värikarttaa ei tueta tässä slang versiossa."
 
-msgid ""
-"\n"
-"If your terminal supports true colors, you need to set your TERM\n"
-"environment variable to a *-direct256, *-direct16, or *-direct variant.\n"
-"Use the 'toe -a' command to list all available variants on your system.\n"
-"Alternatively, you can set COLORTERM=truecolor.\n"
+msgid "Set COLORTERM=truecolor if your terminal really supports true colors."
 msgstr ""
+"Aseta COLORTERM=truecolor, jos pääte todella tukee täydellistä värikarttaa."
 
 msgid "Escape"
 msgstr "Esc"
@@ -1072,12 +1053,6 @@ msgstr "Muuta rivinvaihdot:"
 msgid "Save As"
 msgstr "Tallenna nimellä"
 
-#, fuzzy, c-format
-msgid ""
-"Cannot create directory\n"
-"%s"
-msgstr "Hakemiston %s luonti epäonnistui"
-
 msgid "&Quick save"
 msgstr "&Nopea tallennus"
 
@@ -1849,10 +1824,6 @@ msgstr ""
 msgid "Selected source (file I/O) codepage"
 msgstr ""
 
-#, c-format
-msgid "Copyright (C) 2025-%d River Microelectronics"
-msgstr ""
-
 msgid "Classic terminal file manager inspired by Norton Commander."
 msgstr ""
 
@@ -1895,7 +1866,7 @@ msgstr "Aikakatkaisu:"
 msgid "Pause after run"
 msgstr "Tauko ajon jälkeen"
 
-msgid "Use internal &editor (mcedit)"
+msgid "Use internal edi&t"
 msgstr ""
 
 msgid "Use internal vie&w"
@@ -2187,9 +2158,8 @@ msgstr ""
 msgid "Inode uses extents"
 msgstr ""
 
-#, fuzzy
-msgid "Huge file"
-msgstr "Tallenna tiedosto"
+msgid "Huge_file"
+msgstr ""
 
 msgid "No COW"
 msgstr ""
@@ -2375,6 +2345,12 @@ msgstr "Luo uusi hakemisto"
 
 msgid "Enter directory name:"
 msgstr ""
+
+#, fuzzy, c-format
+msgid ""
+"Cannot create directory\n"
+"%s"
+msgstr "Hakemiston %s luonti epäonnistui"
 
 msgid "Extension file edit"
 msgstr "Laajennustiedoston muokkaus"
@@ -3053,9 +3029,6 @@ msgstr "&Tiedot"
 msgid "&Tree"
 msgstr "&Puu"
 
-msgid "Paneli&ze"
-msgstr ""
-
 msgid "&Listing format..."
 msgstr "&Luettelomuoto..."
 
@@ -3075,6 +3048,9 @@ msgid "S&hell link..."
 msgstr "S&hell linkki..."
 
 msgid "SFTP li&nk..."
+msgstr ""
+
+msgid "Paneli&ze"
 msgstr ""
 
 msgid "&Rescan"
@@ -3530,19 +3506,11 @@ msgstr ""
 msgid "&Show free space"
 msgstr ""
 
-#, fuzzy
-msgid "&Dynamic file list"
-msgstr "&Pitkä tiedostolista"
-
 msgid "Panel split"
 msgstr ""
 
 msgid "Console output"
 msgstr ""
-
-#, fuzzy
-msgid "Dynamic file list"
-msgstr "&Pitkä tiedostolista"
 
 msgid "&Vertical"
 msgstr ""
@@ -3551,9 +3519,6 @@ msgid "&Horizontal"
 msgstr ""
 
 msgid "Output lines:"
-msgstr ""
-
-msgid "Debounce (sec):"
 msgstr ""
 
 msgid "Layout"
@@ -4632,28 +4597,6 @@ msgstr ""
 
 msgid "Cannot fetch a local copy of /ftp://some.host/editme.txt"
 msgstr ""
-
-#, c-format
-#~ msgid ""
-#~ "Unable to use '%s' skin with 256 colors support\n"
-#~ "on non-256 colors terminal.\n"
-#~ "Default skin has been loaded"
-#~ msgstr ""
-#~ "Ei voi käyttää '%s' ulkoasua 256 värlillä\n"
-#~ "terminaalissa joka ei tue värikarttaa-256\n"
-#~ "Oletus ulkoasu on ladattu"
-
-#~ msgid "True color not supported with ncurses."
-#~ msgstr "Täyttä värikarttaa ei ncurses tue."
-
-#~ msgid "Your terminal doesn't even seem to support 256 colors."
-#~ msgstr "Päätteesi ei näytä edes tukevan 256 värikarttaa."
-
-#~ msgid ""
-#~ "Set COLORTERM=truecolor if your terminal really supports true colors."
-#~ msgstr ""
-#~ "Aseta COLORTERM=truecolor, jos pääte todella tukee täydellistä "
-#~ "värikarttaa."
 
 #~ msgid "The Midnight Commander"
 #~ msgstr "Midnight Commander"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Midnight Commander\n"
 "Report-Msgid-Bugs-To: https://github.com/MidnightCommander/mc/issues\n"
-"POT-Creation-Date: 2025-11-13 11:58-0800\n"
+"POT-Creation-Date: 2025-06-19 21:07+0300\n"
 "PO-Revision-Date: 2010-12-29 10:19+0000\n"
 "Last-Translator: Yury V. Zaytsev <yury@shurup.com>, 2025\n"
 "Language-Team: Indonesian (http://app.transifex.com/mc/mc/language/id/)\n"
@@ -152,46 +152,26 @@ msgid ""
 "Default skin has been loaded"
 msgstr ""
 
-#, fuzzy, c-format
+#, c-format
 msgid ""
-"Unable to use '%s' skin with 256 colors support:\n"
-"%s\n"
+"Unable to use '%s' skin with 256 colors support\n"
+"on non-256 colors terminal.\n"
 "Default skin has been loaded"
 msgstr ""
 "Tidak bisa menggukan '%s' skin dengan support 256 warna\n"
 "pada terminal non-256 warna.\n"
 "Skin default sudah dimuat."
 
-msgid ""
-"\n"
-"If your terminal supports 256 colors, you need to set your TERM\n"
-"environment variable to match your terminal, perhaps using\n"
-"a *-256color or *-direct256 variant. Use the 'toe -a'\n"
-"command to list all available variants on your system.\n"
+msgid "True color not supported with ncurses."
 msgstr ""
 
-msgid ""
-"For true color support, you need version 6.1 or later of the ncurses\n"
-"library with wide character and ABI 6 or higher support.\n"
-"Please upgrade your system.\n"
-msgstr ""
-
-msgid ""
-"\n"
-"If your terminal supports true colors, you need to set your TERM\n"
-"environment variable to a *-direct256, *-direct16, or *-direct variant.\n"
-"Use the 'toe -a' command to list all available variants on your system.\n"
+msgid "Your terminal doesn't even seem to support 256 colors."
 msgstr ""
 
 msgid "True color not supported in this slang version."
 msgstr ""
 
-msgid ""
-"\n"
-"If your terminal supports true colors, you need to set your TERM\n"
-"environment variable to a *-direct256, *-direct16, or *-direct variant.\n"
-"Use the 'toe -a' command to list all available variants on your system.\n"
-"Alternatively, you can set COLORTERM=truecolor.\n"
+msgid "Set COLORTERM=truecolor if your terminal really supports true colors."
 msgstr ""
 
 msgid "Escape"
@@ -1063,12 +1043,6 @@ msgstr ""
 msgid "Save As"
 msgstr ""
 
-#, fuzzy, c-format
-msgid ""
-"Cannot create directory\n"
-"%s"
-msgstr "Tidak bisa membuat direktori %s"
-
 msgid "&Quick save"
 msgstr ""
 
@@ -1826,10 +1800,6 @@ msgstr ""
 msgid "Selected source (file I/O) codepage"
 msgstr ""
 
-#, c-format
-msgid "Copyright (C) 2025-%d River Microelectronics"
-msgstr ""
-
 msgid "Classic terminal file manager inspired by Norton Commander."
 msgstr ""
 
@@ -1872,7 +1842,7 @@ msgstr ""
 msgid "Pause after run"
 msgstr ""
 
-msgid "Use internal &editor (mcedit)"
+msgid "Use internal edi&t"
 msgstr ""
 
 msgid "Use internal vie&w"
@@ -2162,7 +2132,7 @@ msgstr ""
 msgid "Inode uses extents"
 msgstr ""
 
-msgid "Huge file"
+msgid "Huge_file"
 msgstr ""
 
 msgid "No COW"
@@ -2349,6 +2319,12 @@ msgstr ""
 
 msgid "Enter directory name:"
 msgstr ""
+
+#, fuzzy, c-format
+msgid ""
+"Cannot create directory\n"
+"%s"
+msgstr "Tidak bisa membuat direktori %s"
 
 msgid "Extension file edit"
 msgstr ""
@@ -3013,9 +2989,6 @@ msgstr ""
 msgid "&Tree"
 msgstr ""
 
-msgid "Paneli&ze"
-msgstr ""
-
 msgid "&Listing format..."
 msgstr ""
 
@@ -3035,6 +3008,9 @@ msgid "S&hell link..."
 msgstr ""
 
 msgid "SFTP li&nk..."
+msgstr ""
+
+msgid "Paneli&ze"
 msgstr ""
 
 msgid "&Rescan"
@@ -3486,16 +3462,10 @@ msgstr ""
 msgid "&Show free space"
 msgstr ""
 
-msgid "&Dynamic file list"
-msgstr ""
-
 msgid "Panel split"
 msgstr ""
 
 msgid "Console output"
-msgstr ""
-
-msgid "Dynamic file list"
 msgstr ""
 
 msgid "&Vertical"
@@ -3505,9 +3475,6 @@ msgid "&Horizontal"
 msgstr ""
 
 msgid "Output lines:"
-msgstr ""
-
-msgid "Debounce (sec):"
 msgstr ""
 
 msgid "Layout"
