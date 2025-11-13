@@ -473,7 +473,7 @@
 #define PACKAGE_NAME "GNU Midnight Commander"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "GNU Midnight Commander b812bf61b99006f7385340539c5363d7a03156fc-git"
+#define PACKAGE_STRING "GNU Midnight Commander 84fd6ed51d2270451857b6483f2e3f49f57effa8-git"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "mc"
@@ -482,7 +482,7 @@
 #define PACKAGE_URL "https://midnight-commander.org"
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "b812bf61b99006f7385340539c5363d7a03156fc-git"
+#define PACKAGE_VERSION "84fd6ed51d2270451857b6483f2e3f49f57effa8-git"
 
 /* Define to the type that is the result of default argument promotions of
    type mode_t. */

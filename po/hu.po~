@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Midnight Commander\n"
 "Report-Msgid-Bugs-To: https://github.com/MidnightCommander/mc/issues\n"
-"POT-Creation-Date: 2025-06-19 21:07+0300\n"
+"POT-Creation-Date: 2025-11-13 11:58-0800\n"
 "PO-Revision-Date: 2010-12-29 10:19+0000\n"
 "Last-Translator: Yury V. Zaytsev <yury@shurup.com>, 2025\n"
 "Language-Team: Hungarian (http://app.transifex.com/mc/mc/language/hu/)\n"
@@ -155,26 +155,46 @@ msgid ""
 "Default skin has been loaded"
 msgstr ""
 
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"Unable to use '%s' skin with 256 colors support\n"
-"on non-256 colors terminal.\n"
+"Unable to use '%s' skin with 256 colors support:\n"
+"%s\n"
 "Default skin has been loaded"
 msgstr ""
 "'%s' borítás nem használható 256 színnel\\n\n"
 "nem 256 színű terminálokon.\\n\n"
 "Alapértelmezett borítás használata"
 
-msgid "True color not supported with ncurses."
+msgid ""
+"\n"
+"If your terminal supports 256 colors, you need to set your TERM\n"
+"environment variable to match your terminal, perhaps using\n"
+"a *-256color or *-direct256 variant. Use the 'toe -a'\n"
+"command to list all available variants on your system.\n"
 msgstr ""
 
-msgid "Your terminal doesn't even seem to support 256 colors."
+msgid ""
+"For true color support, you need version 6.1 or later of the ncurses\n"
+"library with wide character and ABI 6 or higher support.\n"
+"Please upgrade your system.\n"
+msgstr ""
+
+msgid ""
+"\n"
+"If your terminal supports true colors, you need to set your TERM\n"
+"environment variable to a *-direct256, *-direct16, or *-direct variant.\n"
+"Use the 'toe -a' command to list all available variants on your system.\n"
 msgstr ""
 
 msgid "True color not supported in this slang version."
 msgstr ""
 
-msgid "Set COLORTERM=truecolor if your terminal really supports true colors."
+msgid ""
+"\n"
+"If your terminal supports true colors, you need to set your TERM\n"
+"environment variable to a *-direct256, *-direct16, or *-direct variant.\n"
+"Use the 'toe -a' command to list all available variants on your system.\n"
+"Alternatively, you can set COLORTERM=truecolor.\n"
 msgstr ""
 
 msgid "Escape"
@@ -1053,6 +1073,12 @@ msgstr "Sortörés formátum:"
 msgid "Save As"
 msgstr "Mentés másként"
 
+#, fuzzy, c-format
+msgid ""
+"Cannot create directory\n"
+"%s"
+msgstr "A(z) %s könyvtár nem létrehozható"
+
 msgid "&Quick save"
 msgstr "Gyors mentés"
 
@@ -1828,6 +1854,10 @@ msgstr "Beviteli/kijelzési kódlap:"
 msgid "Selected source (file I/O) codepage"
 msgstr ""
 
+#, c-format
+msgid "Copyright (C) 2025-%d River Microelectronics"
+msgstr ""
+
 msgid "Classic terminal file manager inspired by Norton Commander."
 msgstr ""
 
@@ -1870,7 +1900,8 @@ msgstr "Várakozási idő:"
 msgid "Pause after run"
 msgstr "Parancsok utáni várakozás"
 
-msgid "Use internal edi&t"
+#, fuzzy
+msgid "Use internal &editor (mcedit)"
 msgstr "Saját szövegszerkesz&tő"
 
 msgid "Use internal vie&w"
@@ -2165,8 +2196,9 @@ msgstr ""
 msgid "Inode uses extents"
 msgstr ""
 
-msgid "Huge_file"
-msgstr ""
+#, fuzzy
+msgid "Huge file"
+msgstr "Fájl mentése"
 
 msgid "No COW"
 msgstr ""
@@ -2356,12 +2388,6 @@ msgstr "Új könyvtár létrehozása"
 
 msgid "Enter directory name:"
 msgstr "Könyvtár neve:"
-
-#, fuzzy, c-format
-msgid ""
-"Cannot create directory\n"
-"%s"
-msgstr "A(z) %s könyvtár nem létrehozható"
 
 msgid "Extension file edit"
 msgstr "Kiterjesztésfájl szerkesztése"
@@ -3062,6 +3088,9 @@ msgstr "&Info"
 msgid "&Tree"
 msgstr "Köny&vtárfa"
 
+msgid "Paneli&ze"
+msgstr "Panelra helye&zés"
+
 msgid "&Listing format..."
 msgstr ""
 
@@ -3082,9 +3111,6 @@ msgstr "Sh&ell-kapcsolat..."
 
 msgid "SFTP li&nk..."
 msgstr ""
-
-msgid "Paneli&ze"
-msgstr "Panelra helye&zés"
 
 msgid "&Rescan"
 msgstr "Frissít"
@@ -3543,11 +3569,19 @@ msgstr "&Xterm-ablakcím"
 msgid "&Show free space"
 msgstr "&Szabad hely mutatása"
 
+#, fuzzy
+msgid "&Dynamic file list"
+msgstr "&Duplaszéles"
+
 msgid "Panel split"
 msgstr "Panelosztás"
 
 msgid "Console output"
 msgstr "Konzol kimenet"
+
+#, fuzzy
+msgid "Dynamic file list"
+msgstr "&Duplaszéles"
 
 msgid "&Vertical"
 msgstr "&Függőleges"
@@ -3557,6 +3591,9 @@ msgstr "&Vízszintes"
 
 msgid "Output lines:"
 msgstr "Sorok:"
+
+msgid "Debounce (sec):"
+msgstr ""
 
 msgid "Layout"
 msgstr "Megjelenés"
