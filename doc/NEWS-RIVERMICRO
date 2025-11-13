@@ -1,0 +1,5 @@
+Features in versions (C) River Microelectronics
+
+Dynamic file list
+Options > Layout > Dynamic file list
+The file list updates automatically using Linux’s inotify filesystem notifications, so you don’t need to refresh or rescan. Rapid change events are debounced to keep the interface smooth and prevent flickering.

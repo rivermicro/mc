@@ -77,8 +77,8 @@ configure:3971: checking host system type
 configure:3985: result: x86_64-pc-linux-gnu
 configure:4019: checking whether make supports the include directive
 configure:4034: make -f confmf.GNU && cat confinc.out
-make[1]: Entering directory '/data/git/mc'
-make[1]: Leaving directory '/data/git/mc'
+make[2]: Entering directory '/data/git/mc'
+make[2]: Leaving directory '/data/git/mc'
 this is the am__doit target
 configure:4037: $? = 0
 configure:4056: result: yes (GNU style)
@@ -3251,7 +3251,7 @@ configure:21912: $? = 0
 configure:21912: result: yes
 configure:21965: checking for statlstat
 configure:21965: gcc -o conftest -g -O2     conftest.c  >&5
-/usr/bin/ld: /tmp/ccrJwiY1.o: in function `main':
+/usr/bin/ld: /tmp/ccZZGzyv.o: in function `main':
 /data/git/mc/conftest.c:110:(.text.startup+0xb): undefined reference to `statlstat'
 collect2: error: ld returned 1 exit status
 configure:21965: $? = 1
@@ -3378,7 +3378,7 @@ configure:21985: checking for utime.h
 configure:21985: result: yes
 configure:21995: checking for listmntent
 configure:21995: gcc -o conftest -g -O2     conftest.c  >&5
-/usr/bin/ld: /tmp/ccay3Nak.o: in function `main':
+/usr/bin/ld: /tmp/cczFMIal.o: in function `main':
 /data/git/mc/conftest.c:112:(.text.startup+0xb): undefined reference to `listmntent'
 collect2: error: ld returned 1 exit status
 configure:21995: $? = 1
@@ -7366,7 +7366,7 @@ MANDOC='-mandoc'
 MANIFEST_TOOL=':'
 MAN_DATE='November 2025'
 MAN_FLAGS='-c -Tlatin1'
-MAN_VERSION='a24f468'
+MAN_VERSION='23161a3'
 MCLIBS='-lslang   -lssh2 '
 MKDIR_P='/usr/bin/mkdir -p'
 MSGFMT='/usr/bin/msgfmt'
@@ -7420,7 +7420,7 @@ USE_NLS_FALSE='#'
 USE_NLS_TRUE=''
 USE_SCREEN_SLANG_FALSE='#'
 USE_SCREEN_SLANG_TRUE=''
-VERSION='a24f468'
+VERSION='23161a3'
 XGETTEXT='/usr/bin/xgettext'
 XGETTEXT_015='/usr/bin/xgettext'
 XGETTEXT_EXTRA_OPTIONS=''
@@ -7743,234 +7743,286 @@ config.status:1437: creating tests/src/vfs/extfs/helpers-list/data/config.sh
 config.status:1437: creating tests/src/vfs/extfs/helpers-list/misc/Makefile
 config.status:1437: creating tests/src/vfs/ftpfs/Makefile
 config.status:1437: creating config.h
+config.status:1618: config.h is unchanged
 config.status:1666: executing depfiles commands
 config.status:1743: cd src       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/src'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/src'
+make[2]: Entering directory '/data/git/mc/src'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/src'
 config.status:1748: $? = 0
 config.status:1743: cd src/consaver       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/src/consaver'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/src/consaver'
+make[2]: Entering directory '/data/git/mc/src/consaver'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/src/consaver'
 config.status:1748: $? = 0
 config.status:1743: cd src/editor       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/src/editor'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/src/editor'
+make[2]: Entering directory '/data/git/mc/src/editor'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/src/editor'
 config.status:1748: $? = 0
 config.status:1743: cd src/subshell       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/src/subshell'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/src/subshell'
+make[2]: Entering directory '/data/git/mc/src/subshell'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/src/subshell'
 config.status:1748: $? = 0
 config.status:1743: cd src/viewer       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/src/viewer'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/src/viewer'
+make[2]: Entering directory '/data/git/mc/src/viewer'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/src/viewer'
 config.status:1748: $? = 0
 config.status:1743: cd src/diffviewer       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/src/diffviewer'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/src/diffviewer'
+make[2]: Entering directory '/data/git/mc/src/diffviewer'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/src/diffviewer'
 config.status:1748: $? = 0
 config.status:1743: cd src/filemanager       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/src/filemanager'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/src/filemanager'
+make[2]: Entering directory '/data/git/mc/src/filemanager'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/src/filemanager'
 config.status:1748: $? = 0
 config.status:1743: cd src/vfs       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/src/vfs'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/src/vfs'
+make[2]: Entering directory '/data/git/mc/src/vfs'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/src/vfs'
 config.status:1748: $? = 0
 config.status:1743: cd src/vfs/cpio       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/src/vfs/cpio'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/src/vfs/cpio'
+make[2]: Entering directory '/data/git/mc/src/vfs/cpio'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/src/vfs/cpio'
 config.status:1748: $? = 0
 config.status:1743: cd src/vfs/extfs       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/src/vfs/extfs'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/src/vfs/extfs'
+make[2]: Entering directory '/data/git/mc/src/vfs/extfs'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/src/vfs/extfs'
 config.status:1748: $? = 0
 config.status:1743: cd src/vfs/shell       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/src/vfs/shell'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/src/vfs/shell'
+make[2]: Entering directory '/data/git/mc/src/vfs/shell'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/src/vfs/shell'
 config.status:1748: $? = 0
 config.status:1743: cd src/vfs/ftpfs       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/src/vfs/ftpfs'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/src/vfs/ftpfs'
+make[2]: Entering directory '/data/git/mc/src/vfs/ftpfs'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/src/vfs/ftpfs'
 config.status:1748: $? = 0
 config.status:1743: cd src/vfs/sftpfs       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/src/vfs/sftpfs'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/src/vfs/sftpfs'
+make[2]: Entering directory '/data/git/mc/src/vfs/sftpfs'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/src/vfs/sftpfs'
 config.status:1748: $? = 0
 config.status:1743: cd src/vfs/local       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/src/vfs/local'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/src/vfs/local'
+make[2]: Entering directory '/data/git/mc/src/vfs/local'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/src/vfs/local'
 config.status:1748: $? = 0
 config.status:1743: cd src/vfs/sfs       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/src/vfs/sfs'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/src/vfs/sfs'
+make[2]: Entering directory '/data/git/mc/src/vfs/sfs'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/src/vfs/sfs'
 config.status:1748: $? = 0
 config.status:1743: cd src/vfs/tar       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/src/vfs/tar'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/src/vfs/tar'
+make[2]: Entering directory '/data/git/mc/src/vfs/tar'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/src/vfs/tar'
 config.status:1748: $? = 0
 config.status:1743: cd src/vfs/undelfs       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/src/vfs/undelfs'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/src/vfs/undelfs'
+make[2]: Entering directory '/data/git/mc/src/vfs/undelfs'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/src/vfs/undelfs'
 config.status:1748: $? = 0
 config.status:1743: cd lib       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/lib'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/lib'
+make[2]: Entering directory '/data/git/mc/lib'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/lib'
 config.status:1748: $? = 0
 config.status:1743: cd lib/event       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/lib/event'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/lib/event'
+make[2]: Entering directory '/data/git/mc/lib/event'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/lib/event'
 config.status:1748: $? = 0
 config.status:1743: cd lib/filehighlight       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/lib/filehighlight'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/lib/filehighlight'
+make[2]: Entering directory '/data/git/mc/lib/filehighlight'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/lib/filehighlight'
 config.status:1748: $? = 0
 config.status:1743: cd lib/mcconfig       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/lib/mcconfig'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/lib/mcconfig'
+make[2]: Entering directory '/data/git/mc/lib/mcconfig'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/lib/mcconfig'
 config.status:1748: $? = 0
 config.status:1743: cd lib/search       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/lib/search'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/lib/search'
+make[2]: Entering directory '/data/git/mc/lib/search'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/lib/search'
 config.status:1748: $? = 0
 config.status:1743: cd lib/skin       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/lib/skin'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/lib/skin'
+make[2]: Entering directory '/data/git/mc/lib/skin'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/lib/skin'
 config.status:1748: $? = 0
 config.status:1743: cd lib/strutil       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/lib/strutil'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/lib/strutil'
+make[2]: Entering directory '/data/git/mc/lib/strutil'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/lib/strutil'
 config.status:1748: $? = 0
 config.status:1743: cd lib/tty       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/lib/tty'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/lib/tty'
+make[2]: Entering directory '/data/git/mc/lib/tty'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/lib/tty'
 config.status:1748: $? = 0
 config.status:1743: cd lib/vfs       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/lib/vfs'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/lib/vfs'
+make[2]: Entering directory '/data/git/mc/lib/vfs'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/lib/vfs'
 config.status:1748: $? = 0
 config.status:1743: cd lib/widget       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/lib/widget'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/lib/widget'
+make[2]: Entering directory '/data/git/mc/lib/widget'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/lib/widget'
 config.status:1748: $? = 0
 config.status:1743: cd tests/lib       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/tests/lib'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/tests/lib'
+make[2]: Entering directory '/data/git/mc/tests/lib'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/tests/lib'
 config.status:1748: $? = 0
 config.status:1743: cd tests/lib/mcconfig       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/tests/lib/mcconfig'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/tests/lib/mcconfig'
+make[2]: Entering directory '/data/git/mc/tests/lib/mcconfig'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/tests/lib/mcconfig'
 config.status:1748: $? = 0
 config.status:1743: cd tests/lib/search       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/tests/lib/search'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/tests/lib/search'
+make[2]: Entering directory '/data/git/mc/tests/lib/search'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/tests/lib/search'
 config.status:1748: $? = 0
 config.status:1743: cd tests/lib/strutil       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/tests/lib/strutil'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/tests/lib/strutil'
+make[2]: Entering directory '/data/git/mc/tests/lib/strutil'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/tests/lib/strutil'
 config.status:1748: $? = 0
 config.status:1743: cd tests/lib/vfs       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/tests/lib/vfs'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/tests/lib/vfs'
+make[2]: Entering directory '/data/git/mc/tests/lib/vfs'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/tests/lib/vfs'
 config.status:1748: $? = 0
 config.status:1743: cd tests/lib/widget       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/tests/lib/widget'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/tests/lib/widget'
+make[2]: Entering directory '/data/git/mc/tests/lib/widget'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/tests/lib/widget'
 config.status:1748: $? = 0
 config.status:1743: cd tests/src       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/tests/src'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/tests/src'
+make[2]: Entering directory '/data/git/mc/tests/src'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/tests/src'
 config.status:1748: $? = 0
 config.status:1743: cd tests/src/filemanager       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/tests/src/filemanager'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/tests/src/filemanager'
+make[2]: Entering directory '/data/git/mc/tests/src/filemanager'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/tests/src/filemanager'
 config.status:1748: $? = 0
 config.status:1743: cd tests/src/editor       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/tests/src/editor'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/tests/src/editor'
+make[2]: Entering directory '/data/git/mc/tests/src/editor'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/tests/src/editor'
 config.status:1748: $? = 0
 config.status:1743: cd tests/src/vfs/extfs/helpers-list       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/tests/src/vfs/extfs/helpers-list'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/tests/src/vfs/extfs/helpers-list'
+make[2]: Entering directory '/data/git/mc/tests/src/vfs/extfs/helpers-list'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/tests/src/vfs/extfs/helpers-list'
 config.status:1748: $? = 0
 config.status:1743: cd tests/src/vfs/ftpfs       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
-make[1]: Entering directory '/data/git/mc/tests/src/vfs/ftpfs'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/data/git/mc/tests/src/vfs/ftpfs'
+make[2]: Entering directory '/data/git/mc/tests/src/vfs/ftpfs'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/data/git/mc/tests/src/vfs/ftpfs'
 config.status:1748: $? = 0
 config.status:1666: executing libtool commands
 config.status:1666: executing po-directories commands
+
+
+## ---------------------- ##
+## Running config.status. ##
+## ---------------------- ##
+
+This file was extended by GNU Midnight Commander config.status a24f4688dd54f61ed1ca41180a5b7882955f8a77-git, which was
+generated by GNU Autoconf 2.71.  Invocation command line was
+
+  CONFIG_FILES    = 
+  CONFIG_HEADERS  = 
+  CONFIG_LINKS    = 
+  CONFIG_COMMANDS = 
+  $ ./config.status misc/mc.menu
+
+on garage
+
+
+## ---------------------- ##
+## Running config.status. ##
+## ---------------------- ##
+
+This file was extended by GNU Midnight Commander config.status a24f4688dd54f61ed1ca41180a5b7882955f8a77-git, which was
+generated by GNU Autoconf 2.71.  Invocation command line was
+
+  CONFIG_FILES    = 
+  CONFIG_HEADERS  = 
+  CONFIG_LINKS    = 
+  CONFIG_COMMANDS = 
+  $ ./config.status misc/mcedit.menu
+
+on garage
+
+## ---------------------- ##
+## Running config.status. ##
+## ---------------------- ##
+
+This file was extended by GNU Midnight Commander config.status a24f4688dd54f61ed1ca41180a5b7882955f8a77-git, which was
+generated by GNU Autoconf 2.71.  Invocation command line was
+
+  CONFIG_FILES    = 
+  CONFIG_HEADERS  = 
+  CONFIG_LINKS    = 
+  CONFIG_COMMANDS = 
+  $ ./config.status misc/mc.charsets
+
+on garage
+
+config.status:1437: creating misc/mc.menu
+config.status:1437: creating misc/mcedit.menu
+config.status:1437: creating misc/mc.charsets
