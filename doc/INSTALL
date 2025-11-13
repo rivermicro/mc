@@ -1,0 +1,271 @@
+Build requirements for GNU Midnight Commander
+---------------------------------------------
+
+- glibc or uClibc or musl
+  - https://www.gnu.org/software/libc/
+  - https://uclibc.org
+  - https://www.musl-libc.org
+- gcc or clang
+  - https://gcc.gnu.org
+  - https://clang.llvm.org
+- make
+  - https://www.gnu.org/software/make/
+- autoconf >= 2.64
+  - https://www.gnu.org/software/autoconf/
+- automake >= 1.14
+  - https://www.gnu.org/software/automake/
+- libtool
+  - https://www.gnu.org/software/libtool/
+- pkg-config (optional)
+  - https://pkg-config.freedesktop.org/wiki/
+- glib2 >= 2.32
+  - https://www.gtk.org
+- slang2 or ncurses screen library
+  - https://www.jedsoft.org/slang/
+  - https://invisible-island.net/ncurses/ncurses.html
+- gettext >= 0.18.2
+  - https://www.gnu.org/software/gettext/
+- gpm (general purpose mouse daemon as an alternative to xterm mouse)
+  - https://www.nico.schottelius.org/software/gpm/
+- libssh2 >= 1.2.8 (required only for sftp vfs)
+  - https://libssh2.org
+- libaspell (spell checking support in the internal editor)
+  - https://github.com/GNUAspell/aspell
+- ext2fs >= 1.42.4 (support for ext{2,3,4}fs extended attributes)
+  - https://e2fsprogs.sourceforge.net
+
+
+Installation instructions for GNU Midnight Commander
+----------------------------------------------------
+
+Midnight Commander is written in a portable manner and uses GNU Autoconf
+for configuration, so it is expected to compile without changes on many
+other operating systems.
+
+If you are installing from an official tarball, it already contains
+pre-bootstrapped autotools build system (specifically the `configure'
+script). In the case that you are installing from a version control
+checkout, you need to bootstrap the build system yourself first using
+the `autogen.sh' script. Note that to do this you would need to install
+the autotools suite first and not only direct mc build dependencies.
+
+The `configure' shell script attempts to guess correct values for
+various system-dependent variables used during compilation, and creates
+the makefiles.  It also creates a file `config.status' that you can run
+in the future to recreate the current configuration.
+
+To compile this package:
+
+1.  Configure the package for your system.
+
+Normally, you just `cd' to the directory containing the package's source
+code and type `./configure'.
+
+To compile the package in a different directory than the one containing
+the source code, you must use a version of `make' supporting the `VPATH'
+variable, such as GNU `make'.  Change to the directory where you want
+the object files and executables to go and run the `configure' script
+with the full path.  If for some reason `configure' cannot find the
+source code directory, run `configure' with the option `--srcdir=DIR',
+where DIR is the directory that contains the source code.
+
+By default, `make install' will install the package's files in
+`/usr/local/bin', `/usr/local/man', etc.  You can specify an
+installation prefix other than `/usr/local' by giving `configure' the
+option `--prefix=PATH'.
+
+If compiled on GNU/Linux, Midnight Commander detects if you have the gpm
+library installed.  If you installed the gpm mouse library in a
+non-standard place, you will need to use the --with-gpm-mouse flag with
+the directory base where you installed the gpm package.
+
+`configure' recognizes the following options (the list may be
+incomplete, use `configure --help' to get the full list):
+
+`--help'
+     Print a summary of the options to `configure' and exit.
+
+`--quiet'
+`--silent'
+     Do not print messages saying which checks are being made.
+
+`--version'
+     Print the version of Autoconf used to generate the `configure'
+     script, and exit.
+
+`--without-edit'
+     Configure GNU Midnight Commander to be compiled without the
+     built-in file editor.  The built-in editor is compiled in by
+     default.
+
+`--enable-aspell[=prefix]'
+     This option adds spell check support to the internal editor using
+     libaspell and optionally sets path to libaspell installation prefix
+     [default=/usr]. Disabled by default.
+
+`--without-gpm-mouse'
+     Use this flag to disable gpm mouse support (e.g. if you want to
+     use mouse only on X terminals).
+
+`--with-glib-static'
+     Force linking against glib statically.  This option is intended for
+     building binaries for distribution purposes and may not work on
+     some operating systems.
+
+`--with-subshell[=optional]', `--without-subshell' 
+     The subshell support is by default turned on, you can disable
+     this by using the --without-subshell option.  If you pass the
+     =optional parameter, then the subshell support is turned off by
+     default.  To turn it on, specify the `-U' option to the program.
+
+`--without-x'
+     By default, the Midnight Commander tries to connect to the X Window
+     System events to query the status of the keyboard modifiers, such
+     as Control, Shift and Alt, when invoked in a terminal emulator
+     under X11.  This is necessary (but not always sufficient) to
+     recognize some optional but handy key combinations like Ctrl-Home
+     and Shift-Cursor keys.  Use `--without-x' if the dependency on
+     X11 libraries is not desired.
+
+`--disable-largefile'
+     This option disables support for large files (2 gigabytes and more)
+     on the systems where file operations use 32-bit offsets by default,
+     but support for 64-bit offsets is available.  May be useful for
+     slow processors and embedded systems.
+
+`--enable-charset'
+     This option adds support for selecting character set of the text in
+     the internal viewer and editor and converting it on the fly.  The
+     implementation of this option is currently incomplete.
+
+`--disable-background'
+     This option disables support for background operations.  Background
+     operations allow to perform some tasks such as copying files in a
+     separate background process.  Any messages from the background
+     process are forwarded to the foreground process.  More advanced
+     dialogs cannot be forwarded yet, so the background process uses the
+     default.  Background code is known to be less stable than the rest
+     of the code, so you may want to disable it at the compile time.
+
+`--with-homedir'
+     This option allow users  to place user config directories in any
+     place. By default value is 'XDG', this mean, mc will respect XDG
+     standards. If other value is specified, this will used as directory
+     name (relative to $HOME if path is relative, or as is if path is
+     absolute).
+
+VFS options:
+- - - - - -
+
+`--disable-vfs'
+     This option disables the Virtual File System switch code in the
+     Midnight Commander and uses the standard file system calls for
+     file access.  If you specify this option, you won't get the
+     transparent access to archives and remote directories.
+
+`--enable-vfs-cpio'
+     (on by default)
+     Support for cpio filesystem
+
+`--enable-vfs-tar'
+     (on by default)
+     Support for tar filesystem
+
+`--enable-vfs-ftp'
+     (on by default)
+     Support for FTP vfs
+
+`--enable-vfs-shell'
+     (on by default)
+     Support for SHELL vfs
+
+`--enable-vfs-sftp'
+     (auto)
+     Support for SFTP vfs
+
+`--enable-vfs-extfs'
+     (on by default)
+     Support for extfs
+
+`--enable-vfs-sfs`
+     (on by default)
+     Support for sfs
+
+`--enable-vfs-undelfs'
+     (off by default)
+     Support for ext2 undelete filesystem.
+     On systems that use the ext2 or ext3 file system and have the
+     libext2fs library available, this option adds support for
+     recovering deleted files (the undel virtual file system).
+
+Screen library:
+- - - - - - - -
+
+You may also tell configure which screen library you want to use with
+the Midnight Commander.  The configure script will use S-Lang as
+default, and prefers an already installed S-Lang library over the
+included one, but you can override this by using the following flag
+(please note that since S-Lang is default, it is tested better than
+ncurses):
+
+`--with-screen={slang|ncurses}'
+     Choose the library used to manage interaction with the terminal.
+     `slang' means S-Lang library already installed on the system,
+     `ncurses' means ncurses library already installed on the system.
+     The S-Lang library is used by default if found.
+
+`--with-ncurses-includes=[DIR]'
+     Set path to ncurses includes [default=/usr/include]; make
+     sense only if --with-screen=ncurses is used;
+     for /usr/local/include/ncurses specify /usr/local/include.
+
+`--with-ncurses-libs=[DIR]'
+     Set path to ncurses library [default=/usr/lib]; make sense
+     only if --with-screen=ncurses is used.
+
+On systems that require unusual options for compilation or linking that
+the package's `configure' script does not know about, you can give
+`configure' initial values for variables by placing them in the command
+line:
+
+./configure CC='gcc -traditional' LIBS=-lposix
+
+2.  Type `make' to compile the package.
+
+3.  Type `make install' to install programs, data files, and the
+documentation.
+
+If you're on a GNU/Linux system, this will install the `cons.saver'
+utility, which allows the Midnight Commander to save and restore the
+console contents.  This utility can be installed setuid root, but it's
+only needed on systems where users cannot access /dev/vcsaN, where N is
+the virtual console number, on which the uses is logged on.
+
+
+Terminal database
+-----------------
+
+There are many incomplete terminal databases out there, however, a
+complete terminfo is bundled with ncurses.  (It is simple to generate
+the termcap database using the infocmp utility in ncurses).
+
+If you want to run mc on xterm/color_xterm/ansi_xterm (not rxvt), then
+you might read contrib/README.xterm for further information.
+
+
+Porting
+-------
+
+Some less widespread UNIX systems like AIX or Solaris often come with their own
+implementations of make and relevant parts of the toolchain necessary to build
+mc. While autotools abstract a lot of platform specific issues, you might
+encounter unresolved problems while using the native toolchain.
+
+Often, GNU tools are shipped as a part of an additional software collection
+(/opt/freeware on AIX, or OpenCSW on Solaris). These tools are usually prefixed
+with the letter `g', e.g. `gmake' instead of `make'. If you are not really
+interested in building with the native toolchain, try to override tools causing
+problems like this:
+
+./configure MAKE=gmake AR=gar
+gmake

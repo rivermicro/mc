@@ -1,0 +1,4 @@
+DIST_SUBDIRS = hints man hlp
+SUBDIRS = hints man hlp
+
+EXTRA_DIST = FAQ HACKING INSTALL
