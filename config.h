@@ -409,7 +409,7 @@
 #define MAJOR_IN_SYSMACROS 1
 
 /* MC configure arguments */
-#define MC_CONFIGURE_ARGS " '--with-screen=slang' '--prefix=/home/cris/.local'"
+#define MC_CONFIGURE_ARGS ""
 
 /* Define if (like SVR2) there is no specific function for reading the list of
    mounted file systems, and your system has these header files: <sys/fstyp.h>
@@ -473,7 +473,7 @@
 #define PACKAGE_NAME "GNU Midnight Commander"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "GNU Midnight Commander a24f4688dd54f61ed1ca41180a5b7882955f8a77-git"
+#define PACKAGE_STRING "GNU Midnight Commander b812bf61b99006f7385340539c5363d7a03156fc-git"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "mc"
@@ -482,7 +482,7 @@
 #define PACKAGE_URL "https://midnight-commander.org"
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "a24f4688dd54f61ed1ca41180a5b7882955f8a77-git"
+#define PACKAGE_VERSION "b812bf61b99006f7385340539c5363d7a03156fc-git"
 
 /* Define to the type that is the result of default argument promotions of
    type mode_t. */
