@@ -78,8 +78,8 @@ mc_skin_get_default_name (void)
     if (tmp_str != NULL)
         return g_strdup (tmp_str);
 
-    //  from config. Or 'default' if no present in config
-    return mc_config_get_string (mc_global.main_config, CONFIG_APP_SECTION, "skin", "default");
+    //  from config. Or 'dark' if no present in config
+    return mc_config_get_string (mc_global.main_config, CONFIG_APP_SECTION, "skin", "dark");
 }
 
 /* --------------------------------------------------------------------------------------------- */
@@ -100,7 +100,7 @@ mc_skin_try_to_load_default (void)
 {
     mc_skin_reinit ();
     g_free (mc_skin__default.name);
-    mc_skin__default.name = g_strdup ("default");
+    mc_skin__default.name = g_strdup ("dark");
     if (!mc_skin_ini_file_load (&mc_skin__default))
     {
         mc_skin_reinit ();

@@ -8,7 +8,7 @@ strutil.lo: strutil.c /usr/include/stdc-predef.h ../../config.h \
  /usr/include/x86_64-linux-gnu/bits/long-double.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
@@ -35,7 +35,6 @@ strutil.lo: strutil.c /usr/include/stdc-predef.h ../../config.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
  /usr/include/x86_64-linux-gnu/bits/select2.h \
- /usr/include/x86_64-linux-gnu/bits/select-decl.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -57,8 +56,8 @@ strutil.lo: strutil.c /usr/include/stdc-predef.h ../../config.h \
  /usr/include/glib-2.0/glib/gtypes.h \
  /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h \
  /usr/include/glib-2.0/glib/gmacros.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
  /usr/include/linux/limits.h \
@@ -66,9 +65,8 @@ strutil.lo: strutil.c /usr/include/stdc-predef.h ../../config.h \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h \
- /usr/include/glib-2.0/glib/gversionmacros.h \
- /usr/include/glib-2.0/glib/glib-visibility.h /usr/include/time.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
+ /usr/include/glib-2.0/glib/gversionmacros.h /usr/include/time.h \
  /usr/include/x86_64-linux-gnu/bits/time.h \
  /usr/include/x86_64-linux-gnu/bits/timex.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
@@ -79,7 +77,7 @@ strutil.lo: strutil.c /usr/include/stdc-predef.h ../../config.h \
  /usr/include/glib-2.0/glib/gatomic.h \
  /usr/include/glib-2.0/glib/glib-typeof.h \
  /usr/include/glib-2.0/glib/gerror.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
  /usr/include/glib-2.0/glib/gquark.h /usr/include/glib-2.0/glib/gutils.h \
  /usr/include/glib-2.0/glib/gbacktrace.h /usr/include/signal.h \
  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
@@ -105,7 +103,6 @@ strutil.lo: strutil.c /usr/include/stdc-predef.h ../../config.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/unistd.h \
- /usr/include/x86_64-linux-gnu/bits/unistd-decl.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
  /usr/include/linux/close_range.h \
  /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
@@ -137,7 +134,6 @@ strutil.lo: strutil.c /usr/include/stdc-predef.h ../../config.h \
  /usr/include/glib-2.0/glib/gmain.h /usr/include/glib-2.0/glib/gpoll.h \
  /usr/include/glib-2.0/glib/gslist.h /usr/include/glib-2.0/glib/gstring.h \
  /usr/include/glib-2.0/glib/gunicode.h \
- /usr/include/glib-2.0/glib/gstrfuncs.h \
  /usr/include/glib-2.0/glib/gkeyfile.h \
  /usr/include/glib-2.0/glib/gmappedfile.h \
  /usr/include/glib-2.0/glib/gmarkup.h \
@@ -145,7 +141,6 @@ strutil.lo: strutil.c /usr/include/stdc-predef.h ../../config.h \
  /usr/include/glib-2.0/glib/gvariant.h \
  /usr/include/glib-2.0/glib/gvarianttype.h \
  /usr/include/glib-2.0/glib/goption.h \
- /usr/include/glib-2.0/glib/gpathbuf.h \
  /usr/include/glib-2.0/glib/gpattern.h \
  /usr/include/glib-2.0/glib/gprimes.h /usr/include/glib-2.0/glib/gqsort.h \
  /usr/include/glib-2.0/glib/gqueue.h /usr/include/glib-2.0/glib/grand.h \
@@ -158,6 +153,7 @@ strutil.lo: strutil.c /usr/include/stdc-predef.h ../../config.h \
  /usr/include/glib-2.0/glib/gsequence.h \
  /usr/include/glib-2.0/glib/gshell.h /usr/include/glib-2.0/glib/gslice.h \
  /usr/include/glib-2.0/glib/gspawn.h \
+ /usr/include/glib-2.0/glib/gstrfuncs.h \
  /usr/include/glib-2.0/glib/gstringchunk.h \
  /usr/include/glib-2.0/glib/gstrvbuilder.h \
  /usr/include/glib-2.0/glib/gtestutils.h \
@@ -210,15 +206,13 @@ strutil.lo: strutil.c /usr/include/stdc-predef.h ../../config.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h \
  /usr/include/x86_64-linux-gnu/bits/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/stdio2.h ../../lib/vfs/path.h \
  /usr/include/libintl.h /usr/include/locale.h ../../lib/util.h \
  /usr/include/inttypes.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-least.h ../../lib/strutil.h
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h ../../lib/strutil.h
 /usr/include/stdc-predef.h:
 ../../config.h:
 /usr/include/stdlib.h:
@@ -231,7 +225,7 @@ strutil.lo: strutil.c /usr/include/stdc-predef.h ../../config.h \
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
-/usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h:
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
@@ -259,7 +253,6 @@ strutil.lo: strutil.c /usr/include/stdc-predef.h ../../config.h \
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 /usr/include/x86_64-linux-gnu/bits/select2.h:
-/usr/include/x86_64-linux-gnu/bits/select-decl.h:
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
@@ -290,8 +283,8 @@ strutil.lo: strutil.c /usr/include/stdc-predef.h ../../config.h \
 /usr/include/glib-2.0/glib/gtypes.h:
 /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h:
 /usr/include/glib-2.0/glib/gmacros.h:
-/usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h:
-/usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h:
+/usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h:
+/usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h:
 /usr/include/limits.h:
 /usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 /usr/include/x86_64-linux-gnu/bits/local_lim.h:
@@ -300,9 +293,8 @@ strutil.lo: strutil.c /usr/include/stdc-predef.h ../../config.h \
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 /usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
 /usr/include/x86_64-linux-gnu/bits/uio_lim.h:
-/usr/lib/gcc/x86_64-linux-gnu/13/include/float.h:
+/usr/lib/gcc/x86_64-linux-gnu/11/include/float.h:
 /usr/include/glib-2.0/glib/gversionmacros.h:
-/usr/include/glib-2.0/glib/glib-visibility.h:
 /usr/include/time.h:
 /usr/include/x86_64-linux-gnu/bits/time.h:
 /usr/include/x86_64-linux-gnu/bits/timex.h:
@@ -314,7 +306,7 @@ strutil.lo: strutil.c /usr/include/stdc-predef.h ../../config.h \
 /usr/include/glib-2.0/glib/gatomic.h:
 /usr/include/glib-2.0/glib/glib-typeof.h:
 /usr/include/glib-2.0/glib/gerror.h:
-/usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h:
 /usr/include/glib-2.0/glib/gquark.h:
 /usr/include/glib-2.0/glib/gutils.h:
 /usr/include/glib-2.0/glib/gbacktrace.h:
@@ -343,7 +335,6 @@ strutil.lo: strutil.c /usr/include/stdc-predef.h ../../config.h \
 /usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
 /usr/include/x86_64-linux-gnu/bits/getopt_core.h:
 /usr/include/x86_64-linux-gnu/bits/unistd.h:
-/usr/include/x86_64-linux-gnu/bits/unistd-decl.h:
 /usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
 /usr/include/linux/close_range.h:
 /usr/include/x86_64-linux-gnu/bits/ss_flags.h:
@@ -382,7 +373,6 @@ strutil.lo: strutil.c /usr/include/stdc-predef.h ../../config.h \
 /usr/include/glib-2.0/glib/gslist.h:
 /usr/include/glib-2.0/glib/gstring.h:
 /usr/include/glib-2.0/glib/gunicode.h:
-/usr/include/glib-2.0/glib/gstrfuncs.h:
 /usr/include/glib-2.0/glib/gkeyfile.h:
 /usr/include/glib-2.0/glib/gmappedfile.h:
 /usr/include/glib-2.0/glib/gmarkup.h:
@@ -390,7 +380,6 @@ strutil.lo: strutil.c /usr/include/stdc-predef.h ../../config.h \
 /usr/include/glib-2.0/glib/gvariant.h:
 /usr/include/glib-2.0/glib/gvarianttype.h:
 /usr/include/glib-2.0/glib/goption.h:
-/usr/include/glib-2.0/glib/gpathbuf.h:
 /usr/include/glib-2.0/glib/gpattern.h:
 /usr/include/glib-2.0/glib/gprimes.h:
 /usr/include/glib-2.0/glib/gqsort.h:
@@ -407,6 +396,7 @@ strutil.lo: strutil.c /usr/include/stdc-predef.h ../../config.h \
 /usr/include/glib-2.0/glib/gshell.h:
 /usr/include/glib-2.0/glib/gslice.h:
 /usr/include/glib-2.0/glib/gspawn.h:
+/usr/include/glib-2.0/glib/gstrfuncs.h:
 /usr/include/glib-2.0/glib/gstringchunk.h:
 /usr/include/glib-2.0/glib/gstrvbuilder.h:
 /usr/include/glib-2.0/glib/gtestutils.h:
@@ -474,7 +464,6 @@ strutil.lo: strutil.c /usr/include/stdc-predef.h ../../config.h \
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
-/usr/include/x86_64-linux-gnu/bits/stdio2-decl.h:
 /usr/include/x86_64-linux-gnu/bits/stdio.h:
 /usr/include/x86_64-linux-gnu/bits/stdio2.h:
 ../../lib/vfs/path.h:
@@ -482,9 +471,8 @@ strutil.lo: strutil.c /usr/include/stdc-predef.h ../../config.h \
 /usr/include/locale.h:
 ../../lib/util.h:
 /usr/include/inttypes.h:
-/usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h:
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
 /usr/include/stdint.h:
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
-/usr/include/x86_64-linux-gnu/bits/stdint-least.h:
 ../../lib/strutil.h:

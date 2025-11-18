@@ -1,4 +1,4 @@
-#! /home/cris/miniconda3/envs/ai/bin/python3
+#! /usr/bin/python3
 """Torrent Virtual FileSystem for Midnight Commander
 
 The script requires Midnight Commander 3.1+

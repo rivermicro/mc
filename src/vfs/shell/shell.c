@@ -193,6 +193,91 @@ shell_default_stat (struct vfs_class *me)
 
 /* --------------------------------------------------------------------------------------------- */
 
+static void
+shell_format_size (char *buf, size_t buf_len, uintmax_t bytes)
+{
+    double val = bytes;
+    const char *suffix = "B";
+
+    if (bytes >= (1U << 30))
+    {
+        val /= (1024.0 * 1024 * 1024);
+        suffix = "G";
+    }
+    else if (bytes >= (1U << 20))
+    {
+        val /= (1024.0 * 1024);
+        suffix = "M";
+    }
+    else if (bytes >= (1U << 10))
+    {
+        val /= 1024.0;
+        suffix = "K";
+    }
+
+    {
+        char num_buf[32];
+        char *end;
+
+        g_ascii_formatd (num_buf, sizeof (num_buf), "%.2f", val);
+
+        /* strip trailing zeros and dot to keep at most 2 decimals */
+        end = num_buf + strlen (num_buf) - 1;
+        while (end > num_buf && *end == '0')
+            *end-- = '\0';
+        if (end > num_buf && *end == '.')
+            *end = '\0';
+
+        g_snprintf (buf, buf_len, "%s%s", num_buf, suffix);
+    }
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+static void
+shell_format_eta (char *buf, size_t buf_len, uintmax_t done, uintmax_t total, gint64 start_time_us)
+{
+    if (done == 0 || start_time_us == 0)
+    {
+        g_strlcpy (buf, "--", buf_len);
+        return;
+    }
+
+    {
+        gint64 now = g_get_monotonic_time ();
+        double elapsed = (now - start_time_us) / 1000000.0;
+        double rate;
+        guint64 eta_sec;
+        guint64 hours, minutes, seconds;
+
+        if (elapsed <= 0)
+        {
+            g_strlcpy (buf, "--", buf_len);
+            return;
+        }
+
+        rate = done / elapsed;
+        if (rate <= 0)
+        {
+            g_strlcpy (buf, "--", buf_len);
+            return;
+        }
+
+        eta_sec = (guint64) (((total > done ? total - done : 0) / rate) + 0.5);
+        hours = eta_sec / 3600;
+        minutes = (eta_sec % 3600) / 60;
+        seconds = eta_sec % 60;
+
+        if (hours > 99)
+            g_strlcpy (buf, ">99:59:59", buf_len);
+        else
+            g_snprintf (buf, buf_len, "%" G_GUINT64_FORMAT ":%02" G_GUINT64_FORMAT ":%02" G_GUINT64_FORMAT,
+                        hours, minutes, seconds);
+    }
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
 static char *
 shell_load_script_from_file (const char *hostname, const char *script_name, const char *def_content)
 {
@@ -972,6 +1057,7 @@ shell_file_store (struct vfs_class *me, vfs_file_handler_t *fh, char *name, char
     struct stat s;
     int h;
     char *quoted_name;
+    const gint64 start_time = g_get_monotonic_time ();
 
     h = open (localname, O_RDONLY);
     if (h == -1)
@@ -1053,8 +1139,17 @@ shell_file_store (struct vfs_class *me, vfs_file_handler_t *fh, char *name, char
         }
         tty_disable_interrupt_key ();
         total += n;
-        vfs_print_message ("%s: %" PRIuMAX "/%" PRIuMAX, _ ("shell: storing file"),
-                           (uintmax_t) total, (uintmax_t) s.st_size);
+        {
+            char sent_buf[32], total_buf[32], eta_buf[32];
+
+            shell_format_size (sent_buf, sizeof (sent_buf), (uintmax_t) total);
+            shell_format_size (total_buf, sizeof (total_buf), (uintmax_t) s.st_size);
+            shell_format_eta (eta_buf, sizeof (eta_buf), (uintmax_t) total, (uintmax_t) s.st_size,
+                              start_time);
+
+            vfs_print_message ("%s: %s/%s (ETA %s)", _ ("shell: storing file"), sent_buf, total_buf,
+                               eta_buf);
+        }
     }
     close (h);
 

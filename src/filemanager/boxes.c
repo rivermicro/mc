@@ -170,7 +170,7 @@ skin_apply (const gchar *skin_override)
 static const gchar *
 skin_name_to_label (const gchar *name)
 {
-    if (strcmp (name, "default") == 0)
+    if (strcmp (name, "dark") == 0)
         return _ ("< Default >");
     return name;
 }
@@ -222,7 +222,7 @@ sel_skin_button (WButton *button, int action)
     send_message (skin_dlg, NULL, MSG_RESIZE, 0, NULL);
 
     skin_list = listbox_new (1, 1, 11, 22, FALSE, NULL);
-    skin_name = "default";
+    skin_name = "dark";
     listbox_add_item (skin_list, LISTBOX_APPEND_AT_END, 0, skin_name_to_label (skin_name),
                       (void *) skin_name, FALSE);
 
@@ -232,7 +232,7 @@ sel_skin_button (WButton *button, int action)
     for (i = 0; i < skin_names->len; i++)
     {
         skin_name = g_ptr_array_index (skin_names, i);
-        if (strcmp (skin_name, "default") != 0)
+        if (strcmp (skin_name, "dark") != 0)
         {
             listbox_add_item (skin_list, LISTBOX_APPEND_AT_END, 0, skin_name_to_label (skin_name),
                               (void *) skin_name, FALSE);

@@ -8,7 +8,7 @@
 #define ENABLE_CONFIGURE_ARGS 1
 
 /* Define to enable support for ext2fs attributes */
-/* #undef ENABLE_EXT2FS_ATTR */
+#define ENABLE_EXT2FS_ATTR 1
 
 /* Define to 1 if translation of program messages to the user's native
    language is requested. */
@@ -136,7 +136,7 @@
 #define HAVE_INTTYPES_H 1
 
 /* Define to enable gpm mouse support on Linux */
-/* #undef HAVE_LIBGPM */
+#define HAVE_LIBGPM 1
 
 /* Define to 1 if you have the `pt' library (-lpt). */
 /* #undef HAVE_LIBPT */
@@ -277,16 +277,16 @@
 #define HAVE_STRUCT_LINGER_L_LINGER 1
 
 /* Define to 1 if `f_frsize' is a member of `struct statfs'. */
-/* #undef HAVE_STRUCT_STATFS_F_FRSIZE */
+#define HAVE_STRUCT_STATFS_F_FRSIZE 1
 
 /* Define to 1 if `f_fstypename' is a member of `struct statfs'. */
 /* #undef HAVE_STRUCT_STATFS_F_FSTYPENAME */
 
 /* Define to 1 if `f_namelen' is a member of `struct statfs'. */
-/* #undef HAVE_STRUCT_STATFS_F_NAMELEN */
+#define HAVE_STRUCT_STATFS_F_NAMELEN 1
 
 /* Define to 1 if `f_type' is a member of `struct statfs'. */
-/* #undef HAVE_STRUCT_STATFS_F_TYPE */
+#define HAVE_STRUCT_STATFS_F_TYPE 1
 
 /* Define to 1 if `f_basetype' is a member of `struct statvfs'. */
 /* #undef HAVE_STRUCT_STATVFS_F_BASETYPE */
@@ -295,7 +295,7 @@
 /* #undef HAVE_STRUCT_STATVFS_F_FSTYPENAME */
 
 /* Define to 1 if `f_type' is a member of `struct statvfs'. */
-#define HAVE_STRUCT_STATVFS_F_TYPE 1
+/* #undef HAVE_STRUCT_STATVFS_F_TYPE */
 
 /* Define to 1 if `st_blksize' is a member of `struct stat'. */
 #define HAVE_STRUCT_STAT_ST_BLKSIZE 1
@@ -368,7 +368,7 @@
 /* #undef HAVE_TERM_H */
 
 /* Build with unit tests. */
-#define HAVE_TESTS 1
+/* #undef HAVE_TESTS */
 
 /* Define to enable getting events from X Window System */
 #define HAVE_TEXTMODE_X11_SUPPORT 1
@@ -473,7 +473,7 @@
 #define PACKAGE_NAME "GNU Midnight Commander"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "GNU Midnight Commander 84fd6ed51d2270451857b6483f2e3f49f57effa8-git"
+#define PACKAGE_STRING "GNU Midnight Commander 0513364d0e5061af7ef25e545c798d8c85192e95-git"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "mc"
@@ -482,7 +482,7 @@
 #define PACKAGE_URL "https://midnight-commander.org"
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "84fd6ed51d2270451857b6483f2e3f49f57effa8-git"
+#define PACKAGE_VERSION "0513364d0e5061af7ef25e545c798d8c85192e95-git"
 
 /* Define to the type that is the result of default argument promotions of
    type mode_t. */
@@ -562,7 +562,7 @@
 /* #undef USE_MAINTAINER_MODE */
 
 /* Define to 1 if header <sys/statvfs.h> is usable */
-#define USE_STATVFS 1
+/* #undef USE_STATVFS */
 
 /* Enable extensions on AIX 3, Interix.  */
 #ifndef _ALL_SOURCE

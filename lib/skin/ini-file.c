@@ -42,6 +42,8 @@
 
 /*** forward declarations (file scope functions) *************************************************/
 
+static gboolean mc_skin_ini_file_load_search_in_dir (mc_skin_t *mc_skin, const gchar *base_dir);
+
 /*** file scope variables ************************************************************************/
 
 /* --------------------------------------------------------------------------------------------- */
@@ -99,6 +101,30 @@ string_array_comparator (gconstpointer a, gconstpointer b)
 /* --------------------------------------------------------------------------------------------- */
 
 static gboolean
+mc_skin_ini_file_load_uninstalled (mc_skin_t *mc_skin)
+{
+    const char *const candidates[] = { "misc", ".." PATH_SEP_STR "misc", NULL };
+    size_t i;
+
+    for (i = 0; candidates[i] != NULL; i++)
+    {
+        char *base_dir;
+        gboolean loaded;
+
+        base_dir = g_build_filename (candidates[i], (char *) NULL);
+        loaded = mc_skin_ini_file_load_search_in_dir (mc_skin, base_dir);
+        g_free (base_dir);
+
+        if (loaded)
+            return TRUE;
+    }
+
+    return FALSE;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+static gboolean
 mc_skin_ini_file_load_search_in_dir (mc_skin_t *mc_skin, const gchar *base_dir)
 {
     char *file_name, *file_name2;
@@ -139,6 +165,8 @@ mc_skin_list (void)
     mc_skin_get_list_from_dir (mc_config_get_data_path (), list);
     mc_skin_get_list_from_dir (mc_global.sysconfig_dir, list);
     mc_skin_get_list_from_dir (mc_global.share_data_dir, list);
+    mc_skin_get_list_from_dir ("misc", list);
+    mc_skin_get_list_from_dir (".." PATH_SEP_STR "misc", list);
     g_ptr_array_sort (list, (GCompareFunc) string_array_comparator);
 
     return list;
@@ -174,7 +202,11 @@ mc_skin_ini_file_load (mc_skin_t *mc_skin)
         return TRUE;
 
     // /usr/share/mc/skins/
-    return mc_skin_ini_file_load_search_in_dir (mc_skin, mc_global.share_data_dir);
+    if (mc_skin_ini_file_load_search_in_dir (mc_skin, mc_global.share_data_dir))
+        return TRUE;
+
+    // source tree (running uninstalled)
+    return mc_skin_ini_file_load_uninstalled (mc_skin);
 }
 
 /* --------------------------------------------------------------------------------------------- */
