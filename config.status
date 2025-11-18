@@ -729,7 +729,7 @@ fi
 
 
     PACKAGE='mc'
-    VERSION='0513364'
+    VERSION='0d27ff9'
     RM='rm -f'
     ofile='libtool'
 
@@ -1107,7 +1107,7 @@ S["build"]="x86_64-pc-linux-gnu"
 S["MAINT"]="#"
 S["MAINTAINER_MODE_FALSE"]=""
 S["MAINTAINER_MODE_TRUE"]="#"
-S["MAN_VERSION"]="0513364"
+S["MAN_VERSION"]="0d27ff9"
 S["AM_BACKSLASH"]="\\"
 S["AM_DEFAULT_VERBOSITY"]="0"
 S["AM_DEFAULT_V"]="$(AM_DEFAULT_VERBOSITY)"
@@ -1131,7 +1131,7 @@ S["AUTOHEADER"]="${SHELL} '/home/cris/git/mc/config/missing' autoheader"
 S["AUTOMAKE"]="${SHELL} '/home/cris/git/mc/config/missing' automake-1.16"
 S["AUTOCONF"]="${SHELL} '/home/cris/git/mc/config/missing' autoconf"
 S["ACLOCAL"]="${SHELL} '/home/cris/git/mc/config/missing' aclocal-1.16"
-S["VERSION"]="0513364"
+S["VERSION"]="0d27ff9"
 S["PACKAGE"]="mc"
 S["CYGPATH_W"]="echo"
 S["am__isrc"]=""

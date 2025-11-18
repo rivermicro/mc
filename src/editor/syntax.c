@@ -915,6 +915,7 @@ static FILE *
 open_include_file (const char *filename)
 {
     FILE *f;
+    const char *const candidates[] = { "misc", ".." PATH_SEP_STR "misc", NULL };
 
     g_free (error_file_name);
     error_file_name = g_strdup (filename);
@@ -932,7 +933,27 @@ open_include_file (const char *filename)
     error_file_name =
         g_build_filename (mc_global.share_data_dir, EDIT_SYNTAX_DIR, filename, (char *) NULL);
 
-    return fopen (error_file_name, "r");
+    f = fopen (error_file_name, "r");
+    if (f != NULL)
+        return f;
+
+    /* When running uninstalled, fall back to the source-tree syntax dir. */
+    g_free (error_file_name);
+    for (size_t i = 0; candidates[i] != NULL; i++)
+    {
+        error_file_name =
+            g_build_filename (candidates[i], EDIT_SYNTAX_DIR, filename, (char *) NULL);
+        f = fopen (error_file_name, "r");
+        if (f != NULL)
+            return f;
+        g_free (error_file_name);
+        error_file_name = NULL;
+    }
+
+    if (error_file_name == NULL)
+        error_file_name = g_strdup (filename);
+
+    return NULL;
 }
 
 /* --------------------------------------------------------------------------------------------- */
@@ -1292,6 +1313,7 @@ edit_read_syntax_file (WEdit *edit, GPtrArray *pnames, const char *syntax_file,
                        const char *editor_file, const char *first_line, const char *type)
 {
     FILE *f, *g = NULL;
+    const char *const candidates[] = { "misc", ".." PATH_SEP_STR "misc", NULL };
     char *args[ARGS_LEN], *l = NULL;
     long line = 0;
     int result = 0;
@@ -1307,7 +1329,21 @@ edit_read_syntax_file (WEdit *edit, GPtrArray *pnames, const char *syntax_file,
         f = fopen (global_syntax_file, "r");
         g_free (global_syntax_file);
         if (f == NULL)
-            return -1;
+        {
+            /* When running uninstalled, look in the source tree. */
+            for (size_t i = 0; candidates[i] != NULL; i++)
+            {
+                global_syntax_file =
+                    g_build_filename (candidates[i], EDIT_SYNTAX_FILE, (char *) NULL);
+                f = fopen (global_syntax_file, "r");
+                g_free (global_syntax_file);
+                if (f != NULL)
+                    break;
+            }
+
+            if (f == NULL)
+                return -1;
+        }
     }
 
     args[0] = NULL;
