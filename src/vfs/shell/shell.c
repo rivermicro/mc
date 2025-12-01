@@ -217,16 +217,8 @@ shell_format_size (char *buf, size_t buf_len, uintmax_t bytes)
 
     {
         char num_buf[32];
-        char *end;
 
-        g_ascii_formatd (num_buf, sizeof (num_buf), "%.2f", val);
-
-        /* strip trailing zeros and dot to keep at most 2 decimals */
-        end = num_buf + strlen (num_buf) - 1;
-        while (end > num_buf && *end == '0')
-            *end-- = '\0';
-        if (end > num_buf && *end == '.')
-            *end = '\0';
+        g_ascii_formatd (num_buf, sizeof (num_buf), "%.3f", val);
 
         g_snprintf (buf, buf_len, "%s%s", num_buf, suffix);
     }
@@ -1140,15 +1132,26 @@ shell_file_store (struct vfs_class *me, vfs_file_handler_t *fh, char *name, char
         tty_disable_interrupt_key ();
         total += n;
         {
-            char sent_buf[32], total_buf[32], eta_buf[32];
+            char sent_buf[32], total_buf[32], eta_buf[32], percent_num_buf[32], percent_buf[36];
+            double percent = 0.0;
 
             shell_format_size (sent_buf, sizeof (sent_buf), (uintmax_t) total);
             shell_format_size (total_buf, sizeof (total_buf), (uintmax_t) s.st_size);
             shell_format_eta (eta_buf, sizeof (eta_buf), (uintmax_t) total, (uintmax_t) s.st_size,
                               start_time);
 
-            vfs_print_message ("%s: %s/%s (ETA %s)", _ ("shell: storing file"), sent_buf, total_buf,
-                               eta_buf);
+            if (s.st_size > 0)
+            {
+                percent = (double) total * 100.0 / (double) s.st_size;
+                if (percent > 100.0)
+                    percent = 100.0;
+            }
+
+            g_ascii_formatd (percent_num_buf, sizeof (percent_num_buf), "%.0f", percent);
+            g_snprintf (percent_buf, sizeof (percent_buf), "%s%%", percent_num_buf);
+
+            vfs_print_message (_ ("%s %s %s %s %s"), name, eta_buf, total_buf, sent_buf,
+                               percent_buf);
         }
     }
     close (h);
