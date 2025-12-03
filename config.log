@@ -27,6 +27,9 @@ uname -v = #88~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue Oct 14 14:03:14 UTC 2
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
 
+PATH: /home/cris/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/
+PATH: /home/cris/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/
+PATH: /home/cris/.local/bin/
 PATH: /home/cris/.nvm/versions/node/v23.5.0/bin/
 PATH: /home/cris/.local/bin/
 PATH: /usr/local/sbin/
@@ -3175,7 +3178,7 @@ configure:21777: $? = 0
 configure:21777: result: yes
 configure:21830: checking for statlstat
 configure:21830: gcc -o conftest -g -O2     conftest.c  >&5
-/usr/bin/ld: /tmp/cciSswu9.o: in function `main':
+/usr/bin/ld: /tmp/ccDmj1pD.o: in function `main':
 /home/cris/git/mc/conftest.c:109: undefined reference to `statlstat'
 collect2: error: ld returned 1 exit status
 configure:21830: $? = 1
@@ -3301,7 +3304,7 @@ configure:21850: checking for utime.h
 configure:21850: result: yes
 configure:21860: checking for listmntent
 configure:21860: gcc -o conftest -g -O2     conftest.c  >&5
-/usr/bin/ld: /tmp/ccSZJUzU.o: in function `main':
+/usr/bin/ld: /tmp/ccZZcSM2.o: in function `main':
 /home/cris/git/mc/conftest.c:111: undefined reference to `listmntent'
 collect2: error: ld returned 1 exit status
 configure:21860: $? = 1
@@ -7463,9 +7466,9 @@ MAINTAINER_MODE_TRUE='#'
 MAKEINFO='${SHELL} '\''/home/cris/git/mc/config/missing'\'' makeinfo'
 MANDOC='-mandoc'
 MANIFEST_TOOL=':'
-MAN_DATE='November 2025'
+MAN_DATE='December 2025'
 MAN_FLAGS='-c -Tlatin1'
-MAN_VERSION='fc2ce69'
+MAN_VERSION='8d8a3a8'
 MCLIBS='-lslang  -lgpm -le2p -lssh2'
 MKDIR_P='/usr/bin/mkdir -p'
 MSGFMT='/usr/bin/msgfmt'
@@ -7519,7 +7522,7 @@ USE_NLS_FALSE='#'
 USE_NLS_TRUE=''
 USE_SCREEN_SLANG_FALSE='#'
 USE_SCREEN_SLANG_TRUE=''
-VERSION='fc2ce69'
+VERSION='8d8a3a8'
 XGETTEXT='/usr/bin/xgettext'
 XGETTEXT_015='/usr/bin/xgettext'
 XGETTEXT_EXTRA_OPTIONS=''
@@ -7848,282 +7851,193 @@ config.status:1617: config.h is unchanged
 config.status:1665: executing depfiles commands
 config.status:1742: cd src       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/src'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/src'
 config.status:1747: $? = 0
 config.status:1742: cd src/consaver       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/src/consaver'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/src/consaver'
 config.status:1747: $? = 0
 config.status:1742: cd src/editor       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/src/editor'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/src/editor'
 config.status:1747: $? = 0
 config.status:1742: cd src/subshell       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/src/subshell'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/src/subshell'
 config.status:1747: $? = 0
 config.status:1742: cd src/viewer       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/src/viewer'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/src/viewer'
 config.status:1747: $? = 0
 config.status:1742: cd src/diffviewer       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/src/diffviewer'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/src/diffviewer'
 config.status:1747: $? = 0
 config.status:1742: cd src/filemanager       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/src/filemanager'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/src/filemanager'
 config.status:1747: $? = 0
 config.status:1742: cd src/vfs       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/src/vfs'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/src/vfs'
 config.status:1747: $? = 0
 config.status:1742: cd src/vfs/cpio       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/src/vfs/cpio'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/src/vfs/cpio'
 config.status:1747: $? = 0
 config.status:1742: cd src/vfs/extfs       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/src/vfs/extfs'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/src/vfs/extfs'
 config.status:1747: $? = 0
 config.status:1742: cd src/vfs/shell       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/src/vfs/shell'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/src/vfs/shell'
 config.status:1747: $? = 0
 config.status:1742: cd src/vfs/ftpfs       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/src/vfs/ftpfs'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/src/vfs/ftpfs'
 config.status:1747: $? = 0
 config.status:1742: cd src/vfs/sftpfs       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/src/vfs/sftpfs'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/src/vfs/sftpfs'
 config.status:1747: $? = 0
 config.status:1742: cd src/vfs/local       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/src/vfs/local'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/src/vfs/local'
 config.status:1747: $? = 0
 config.status:1742: cd src/vfs/sfs       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/src/vfs/sfs'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/src/vfs/sfs'
 config.status:1747: $? = 0
 config.status:1742: cd src/vfs/tar       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/src/vfs/tar'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/src/vfs/tar'
 config.status:1747: $? = 0
 config.status:1742: cd src/vfs/undelfs       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/src/vfs/undelfs'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/src/vfs/undelfs'
 config.status:1747: $? = 0
 config.status:1742: cd lib       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/lib'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/lib'
 config.status:1747: $? = 0
 config.status:1742: cd lib/event       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/lib/event'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/lib/event'
 config.status:1747: $? = 0
 config.status:1742: cd lib/filehighlight       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/lib/filehighlight'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/lib/filehighlight'
 config.status:1747: $? = 0
 config.status:1742: cd lib/mcconfig       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/lib/mcconfig'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/lib/mcconfig'
 config.status:1747: $? = 0
 config.status:1742: cd lib/search       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/lib/search'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/lib/search'
 config.status:1747: $? = 0
 config.status:1742: cd lib/skin       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/lib/skin'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/lib/skin'
 config.status:1747: $? = 0
 config.status:1742: cd lib/strutil       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/lib/strutil'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/lib/strutil'
 config.status:1747: $? = 0
 config.status:1742: cd lib/tty       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/lib/tty'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/lib/tty'
 config.status:1747: $? = 0
 config.status:1742: cd lib/vfs       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/lib/vfs'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/lib/vfs'
 config.status:1747: $? = 0
 config.status:1742: cd lib/widget       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/lib/widget'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/lib/widget'
 config.status:1747: $? = 0
 config.status:1742: cd tests/lib       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/tests/lib'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/tests/lib'
 config.status:1747: $? = 0
 config.status:1742: cd tests/lib/mcconfig       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/tests/lib/mcconfig'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/tests/lib/mcconfig'
 config.status:1747: $? = 0
 config.status:1742: cd tests/lib/search       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/tests/lib/search'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/tests/lib/search'
 config.status:1747: $? = 0
 config.status:1742: cd tests/lib/strutil       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/tests/lib/strutil'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/tests/lib/strutil'
 config.status:1747: $? = 0
 config.status:1742: cd tests/lib/vfs       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/tests/lib/vfs'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/tests/lib/vfs'
 config.status:1747: $? = 0
 config.status:1742: cd tests/lib/widget       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/tests/lib/widget'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/tests/lib/widget'
 config.status:1747: $? = 0
 config.status:1742: cd tests/src       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/tests/src'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/tests/src'
 config.status:1747: $? = 0
 config.status:1742: cd tests/src/filemanager       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/tests/src/filemanager'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/tests/src/filemanager'
 config.status:1747: $? = 0
 config.status:1742: cd tests/src/editor       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/tests/src/editor'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/tests/src/editor'
 config.status:1747: $? = 0
 config.status:1742: cd tests/src/vfs/extfs/helpers-list       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/tests/src/vfs/extfs/helpers-list'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/tests/src/vfs/extfs/helpers-list'
 config.status:1747: $? = 0
 config.status:1742: cd tests/src/vfs/ftpfs       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make[2]: Entering directory '/home/cris/git/mc/tests/src/vfs/ftpfs'
-make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[2]: Nothing to be done for 'am--depfiles'.
 make[2]: Leaving directory '/home/cris/git/mc/tests/src/vfs/ftpfs'
 config.status:1747: $? = 0
 config.status:1665: executing libtool commands
 config.status:1665: executing po-directories commands
-
-
-## ---------------------- ##
-## Running config.status. ##
-## ---------------------- ##
-## ---------------------- ##
-## Running config.status. ##
-## ---------------------- ##
-
-This file was extended by GNU Midnight Commander config.status 0513364d0e5061af7ef25e545c798d8c85192e95-git, which was
-generated by GNU Autoconf 2.71.  Invocation command line was
-
-  CONFIG_FILES    = 
-  CONFIG_HEADERS  = 
-  CONFIG_LINKS    = 
-  CONFIG_COMMANDS = 
-  $ ./config.status misc/mc.charsets
-
-on air
-
-This file was extended by GNU Midnight Commander config.status 0513364d0e5061af7ef25e545c798d8c85192e95-git, which was
-generated by GNU Autoconf 2.71.  Invocation command line was
-
-  CONFIG_FILES    = 
-  CONFIG_HEADERS  = 
-  CONFIG_LINKS    = 
-  CONFIG_COMMANDS = 
-  $ ./config.status misc/mc.menu
-
-on air
-
-
-
-## ---------------------- ##
-## Running config.status. ##
-## ---------------------- ##
-
-This file was extended by GNU Midnight Commander config.status 0513364d0e5061af7ef25e545c798d8c85192e95-git, which was
-generated by GNU Autoconf 2.71.  Invocation command line was
-
-  CONFIG_FILES    = 
-  CONFIG_HEADERS  = 
-  CONFIG_LINKS    = 
-  CONFIG_COMMANDS = 
-  $ ./config.status misc/mcedit.menu
-
-on air
-
-config.status:1436: creating misc/mc.menu
-config.status:1436: creating misc/mcedit.menu
-config.status:1436: creating misc/mc.charsets

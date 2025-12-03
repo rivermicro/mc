@@ -835,6 +835,18 @@ find_par_start:
             g_free (s);
         }
 
+        /* Keep VFS prefix intact for panelization on non-local paths. */
+        {
+            vfs_path_t *start_vpath;
+            const struct vfs_class *start_vfs;
+
+            start_vpath = vfs_path_from_str (*start_dir);
+            start_vfs = VFS_CLASS (vfs_path_get_last_path_vfs (start_vpath));
+            if (start_vfs != NULL && (start_vfs->flags & VFSF_LOCAL) == 0)
+                *start_dir_len = -1;
+            vfs_path_free (start_vpath, TRUE);
+        }
+
         if (!options.ignore_dirs_enable || input_is_empty (in_ignore)
             || DIR_IS_DOT (input_get_ctext (in_ignore)))
             *ignore_dirs = NULL;
@@ -1804,9 +1816,24 @@ do_find (WPanel *panel, const char *start_dir, ssize_t start_dir_len, const char
             // skip initial start dir
             p = name;
             if (start_dir_len > 0)
-                p += (size_t) start_dir_len;
-            if (IS_PATH_SEP (*p))
-                p++;
+            {
+                gboolean cut_prefix = TRUE;
+                vfs_path_t *p_vpath;
+                const struct vfs_class *p_vfs;
+
+                p_vpath = vfs_path_from_str (name);
+                p_vfs = VFS_CLASS (vfs_path_get_last_path_vfs (p_vpath));
+                if (p_vfs != NULL && (p_vfs->flags & VFSF_LOCAL) == 0)
+                    cut_prefix = FALSE;  // keep VFS prefix for non-local results
+                vfs_path_free (p_vpath, TRUE);
+
+                if (cut_prefix)
+                {
+                    p += (size_t) start_dir_len;
+                    if (IS_PATH_SEP (*p))
+                        p++;
+                }
+            }
 
             if (!handle_path (p, &st, &link_to_dir, &stale_link))
             {
