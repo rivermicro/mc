@@ -10,6 +10,8 @@
 
 /* Enable or disable dynamic directory watching. */
 void dirwatch_set_enabled (gboolean enabled);
+/* Suppress panel reload/repaint while still queuing events. */
+void dirwatch_set_quiet (gboolean quiet);
 
 /* Notify watcher that a panel's directory has changed. */
 void dirwatch_panel_dir_changed (WPanel *panel);

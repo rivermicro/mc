@@ -51,6 +51,7 @@ static int wd_right = -1;
 static char *left_path = NULL;
 static char *right_path = NULL;
 static gboolean watcher_enabled = FALSE;
+static gboolean watcher_quiet = FALSE;
 static gboolean pending_left = FALSE;
 static gboolean pending_right = FALSE;
 /* default debounce interval in milliseconds */
@@ -220,18 +221,14 @@ static int dirwatch_callback (int fd, void *info)
     return 0;
 }
 
-static int dirwatch_timer_callback (int fd, void *info)
+static void
+dirwatch_apply_pending (void)
 {
-    (void) info;
-    if (fd != timer_fd)
-        return 0;
-    /* drain timerfd */
-    uint64_t expirations = 0;
-    (void) read (timer_fd, &expirations, sizeof (expirations));
+    gboolean do_left, do_right;
 
-    /* snapshot and clear pending flags */
-    gboolean do_left = pending_left;
-    gboolean do_right = pending_right;
+    do_left = pending_left;
+    do_right = pending_right;
+
     pending_left = pending_right = FALSE;
 
     if (do_left && left_panel != NULL)
@@ -242,8 +239,28 @@ static int dirwatch_timer_callback (int fd, void *info)
     if (do_left || do_right)
         repaint_screen ();
 
-    /* disarm timer to avoid repeats until new events */
+    /* disarm until new events arrive */
     dirwatch_disarm_timer ();
+}
+
+static int dirwatch_timer_callback (int fd, void *info)
+{
+    (void) info;
+    if (fd != timer_fd)
+        return 0;
+    /* drain timerfd */
+    uint64_t expirations = 0;
+    (void) read (timer_fd, &expirations, sizeof (expirations));
+
+    /* snapshot and clear pending flags */
+    if (watcher_quiet)
+    {
+        /* keep pending flags set; they will be applied when quiet mode ends */
+        dirwatch_disarm_timer ();
+        return 0;
+    }
+
+    dirwatch_apply_pending ();
     return 0;
 }
 
@@ -300,6 +317,18 @@ void dirwatch_set_enabled (gboolean enabled)
     dirwatch_update_watches ();
 }
 
+void
+dirwatch_set_quiet (gboolean quiet)
+{
+    if (!watcher_enabled || watcher_quiet == quiet)
+        return;
+
+    watcher_quiet = quiet;
+
+    if (!watcher_quiet && (pending_left || pending_right))
+        dirwatch_apply_pending ();
+}
+
 void dirwatch_panel_dir_changed (WPanel *panel)
 {
     (void) panel;
@@ -313,6 +342,12 @@ void dirwatch_panel_dir_changed (WPanel *panel)
 void dirwatch_set_enabled (gboolean enabled)
 {
     (void) enabled;
+}
+
+void
+dirwatch_set_quiet (gboolean quiet)
+{
+    (void) quiet;
 }
 
 void dirwatch_panel_dir_changed (WPanel *panel)

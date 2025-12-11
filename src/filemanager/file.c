@@ -82,6 +82,7 @@
 #include "tree.h"
 #include "filemanager.h"  // other_panel
 #include "layout.h"       // rotate_dash()
+#include "dirwatch.h"     // dirwatch_set_quiet()
 #include "ioblksize.h"    // io_blksize()
 
 #include "file.h"
@@ -3506,6 +3507,7 @@ panel_operate (void *source_panel, FileOperation operation, gboolean force_singl
     filegui_dialog_type_t dialog_type = FILEGUI_DIALOG_ONE_ITEM;
 
     gboolean do_bg = FALSE;  // do background operation?
+    gboolean dirwatch_quiet = FALSE;  // did we silence dynamic list updates?
 
     linklist = free_linklist (linklist);
     dest_dirs = free_linklist (dest_dirs);
@@ -3566,8 +3568,12 @@ panel_operate (void *source_panel, FileOperation operation, gboolean force_singl
             return FALSE;
         }
     }
-    else
 #endif
+
+    /* Foreground transfer: avoid dynamic panel reload flicker */
+    dirwatch_set_quiet (TRUE);
+    dirwatch_quiet = TRUE;
+
     {
         const file_entry_t *fe;
 
@@ -3707,6 +3713,9 @@ clean_up:
 #endif
 
 ret_fast:
+    if (dirwatch_quiet)
+        dirwatch_set_quiet (FALSE);
+
     file_op_context_destroy (ctx);
 
     update_panels (UP_OPTIMIZE, UP_KEEPSEL);
