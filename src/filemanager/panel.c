@@ -58,6 +58,7 @@
 #include "src/selcodepage.h"  // select_charset (), SELECT_CHARSET_NO_TRANSLATE
 #include "src/keymap.h"       // global_keymap_t
 #include "src/history.h"
+#include "src/util.h"         // file_error_message()
 #ifdef ENABLE_SUBSHELL
 #include "src/subshell/subshell.h"  // subshell_chdir()
 #endif
@@ -2856,6 +2857,31 @@ stop_search (WPanel *panel)
 }
 
 /* --------------------------------------------------------------------------------------------- */
+static void
+show_stale_link_error (WPanel *panel, const file_entry_t *fe)
+{
+    char link_target[MC_MAXPATHLEN];
+    vfs_path_t *link_vpath;
+    ssize_t len;
+
+    link_vpath = vfs_path_append_new (panel->cwd_vpath, fe->fname->str, (char *) NULL);
+    len = mc_readlink (link_vpath, link_target, sizeof (link_target) - 1);
+    vfs_path_free (link_vpath, TRUE);
+
+    if (len > 0)
+    {
+        char *path_with_target;
+
+        link_target[len] = '\0';
+        path_with_target = g_strdup_printf ("%s -> %s", fe->fname->str, link_target);
+        file_error_message (_ ("Cannot change directory to\n%s"), path_with_target);
+        g_free (path_with_target);
+    }
+    else
+        cd_error_message (fe->fname->str);
+}
+
+/* --------------------------------------------------------------------------------------------- */
 /** Return TRUE if the Enter key has been processed, FALSE otherwise */
 
 static gboolean
@@ -2873,6 +2899,12 @@ do_enter_on_file_entry (WPanel *panel, const file_entry_t *fe)
     if (S_ISDIR (fe->st.st_mode) || link_isdir (fe) || (fe->st.st_mode == 0))
     {
         vfs_path_t *fname_vpath;
+
+        if (S_ISLNK (fe->st.st_mode) && fe->f.stale_link != 0)
+        {
+            show_stale_link_error (panel, fe);
+            return TRUE;
+        }
 
         fname_vpath = vfs_path_from_str (fname);
         if (!panel_cd (panel, fname_vpath, cd_exact))
