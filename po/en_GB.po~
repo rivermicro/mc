@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Midnight Commander\n"
 "Report-Msgid-Bugs-To: https://github.com/MidnightCommander/mc/issues\n"
-"POT-Creation-Date: 2025-11-16 05:51-0800\n"
+"POT-Creation-Date: 2025-12-11 16:20-0800\n"
 "PO-Revision-Date: 2010-12-29 10:19+0000\n"
 "Last-Translator: Yury V. Zaytsev <yury@shurup.com>, 2025\n"
 "Language-Team: English (United Kingdom) (http://app.transifex.com/mc/mc/"
@@ -4600,8 +4600,9 @@ msgstr "shell: store %s: sending command..."
 msgid "shell: Local read failed, sending zeros"
 msgstr "shell: Local read failed, sending zeros"
 
-msgid "shell: storing file"
-msgstr "shell: storing file"
+#, fuzzy, c-format
+msgid "%s %s %s %s %s"
+msgstr "Time: %s %s (%s)"
 
 msgid "Aborting transfer..."
 msgstr "Aborting transfer..."
@@ -4822,6 +4823,9 @@ msgstr "Continue from beginning?"
 
 msgid "Cannot fetch a local copy of /ftp://some.host/editme.txt"
 msgstr "Cannot fetch a local copy of /ftp://some.host/editme.txt"
+
+#~ msgid "shell: storing file"
+#~ msgstr "shell: storing file"
 
 #, c-format
 #~ msgid ""

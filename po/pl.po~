@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Midnight Commander\n"
 "Report-Msgid-Bugs-To: https://github.com/MidnightCommander/mc/issues\n"
-"POT-Creation-Date: 2025-11-16 05:51-0800\n"
+"POT-Creation-Date: 2025-12-11 16:20-0800\n"
 "PO-Revision-Date: 2010-12-29 10:19+0000\n"
 "Last-Translator: Yury V. Zaytsev <yury@shurup.com>, 2025\n"
 "Language-Team: Polish (http://app.transifex.com/mc/mc/language/pl/)\n"
@@ -4625,8 +4625,9 @@ msgstr "powłoka: zapis %s: wysyłanie polecenia…"
 msgid "shell: Local read failed, sending zeros"
 msgstr "powłoka: lokalny odczyt się nie powiódł, wysyłanie zer"
 
-msgid "shell: storing file"
-msgstr "powłoka: wysyłanie pliku"
+#, fuzzy, c-format
+msgid "%s %s %s %s %s"
+msgstr "Czas: %s %s (%s)"
 
 msgid "Aborting transfer..."
 msgstr "Przerywanie przesyłania…"
@@ -4848,6 +4849,9 @@ msgstr "Kontynuować od początku?"
 msgid "Cannot fetch a local copy of /ftp://some.host/editme.txt"
 msgstr ""
 "Nie można pobrać lokalnej kopii /ftp://jakiś.komputer/modyfikuj_mnie.txt"
+
+#~ msgid "shell: storing file"
+#~ msgstr "powłoka: wysyłanie pliku"
 
 #, c-format
 #~ msgid ""

@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Midnight Commander\n"
 "Report-Msgid-Bugs-To: https://github.com/MidnightCommander/mc/issues\n"
-"POT-Creation-Date: 2025-11-16 05:51-0800\n"
+"POT-Creation-Date: 2025-12-11 16:20-0800\n"
 "PO-Revision-Date: 2010-12-29 10:19+0000\n"
 "Last-Translator: Yury V. Zaytsev <yury@shurup.com>, 2019,2025\n"
 "Language-Team: Belarusian (http://app.transifex.com/mc/mc/language/be/)\n"
@@ -4622,8 +4622,9 @@ msgstr "shell: захоўванне \"%s\": адпраўленне каманд�
 msgid "shell: Local read failed, sending zeros"
 msgstr "shell: не ўдалося прачытаць лакальна, адпраўляюцца нулі"
 
-msgid "shell: storing file"
-msgstr "shell: захоўванне файла"
+#, fuzzy, c-format
+msgid "%s %s %s %s %s"
+msgstr "Час: %s %s (%s)"
 
 msgid "Aborting transfer..."
 msgstr "Перарыванне перадачы..."
@@ -4844,6 +4845,9 @@ msgstr "Працягваць ад пачатку?"
 
 msgid "Cannot fetch a local copy of /ftp://some.host/editme.txt"
 msgstr "Немагчыма атрымаць лакальную копію /ftp://some.host/editme.txt"
+
+#~ msgid "shell: storing file"
+#~ msgstr "shell: захоўванне файла"
 
 #, c-format
 #~ msgid ""

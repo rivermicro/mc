@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Midnight Commander\n"
 "Report-Msgid-Bugs-To: https://github.com/MidnightCommander/mc/issues\n"
-"POT-Creation-Date: 2025-11-16 05:51-0800\n"
+"POT-Creation-Date: 2025-12-11 16:20-0800\n"
 "PO-Revision-Date: 2010-12-29 10:19+0000\n"
 "Last-Translator: Yury V. Zaytsev <yury@shurup.com>, 2025\n"
 "Language-Team: Spanish (http://app.transifex.com/mc/mc/language/es/)\n"
@@ -4614,8 +4614,9 @@ msgstr "shell: Guardar %s: enviando comando..."
 msgid "shell: Local read failed, sending zeros"
 msgstr "shell: Fallo de lectura local, enviando ceros"
 
-msgid "shell: storing file"
-msgstr "shell: Guardando archivo"
+#, fuzzy, c-format
+msgid "%s %s %s %s %s"
+msgstr "Tiempo: %s %s (%s)"
 
 msgid "Aborting transfer..."
 msgstr "Abortando transferencia."
@@ -4836,6 +4837,9 @@ msgstr "¿Continuar desde el principio?"
 
 msgid "Cannot fetch a local copy of /ftp://some.host/editme.txt"
 msgstr "Imposible obtener una copia local de /ftp://ese.equipo/edítame.txt"
+
+#~ msgid "shell: storing file"
+#~ msgstr "shell: Guardando archivo"
 
 #, c-format
 #~ msgid ""

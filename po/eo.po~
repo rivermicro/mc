@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Midnight Commander\n"
 "Report-Msgid-Bugs-To: https://github.com/MidnightCommander/mc/issues\n"
-"POT-Creation-Date: 2025-11-16 05:51-0800\n"
+"POT-Creation-Date: 2025-12-11 16:20-0800\n"
 "PO-Revision-Date: 2010-12-29 10:19+0000\n"
 "Last-Translator: Yury V. Zaytsev <yury@shurup.com>, 2022,2025\n"
 "Language-Team: Esperanto (http://app.transifex.com/mc/mc/language/eo/)\n"
@@ -4594,8 +4594,9 @@ msgstr "ŝelo: teno %s: sendanta komandon..."
 msgid "shell: Local read failed, sending zeros"
 msgstr "ŝelo: Loka legado malsukcesis, sendanta nulojn"
 
-msgid "shell: storing file"
-msgstr "ŝelo: konservanta dosieron"
+#, fuzzy, c-format
+msgid "%s %s %s %s %s"
+msgstr "Tempo: %s %s (%s)"
 
 msgid "Aborting transfer..."
 msgstr "Ĉesiganta transigon..."
@@ -4816,6 +4817,9 @@ msgstr "Ĉu deiri de la komenco?"
 
 msgid "Cannot fetch a local copy of /ftp://some.host/editme.txt"
 msgstr "Ne eblas atingi lokan kopion de /ftp://some.host/editme.txt"
+
+#~ msgid "shell: storing file"
+#~ msgstr "ŝelo: konservanta dosieron"
 
 #, c-format
 #~ msgid ""

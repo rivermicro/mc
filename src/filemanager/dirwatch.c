@@ -50,6 +50,7 @@ static int wd_left = -1;
 static int wd_right = -1;
 static char *left_path = NULL;
 static char *right_path = NULL;
+static gboolean timer_armed = FALSE;
 static gboolean watcher_enabled = FALSE;
 static gboolean watcher_quiet = FALSE;
 static gboolean pending_left = FALSE;
@@ -83,6 +84,7 @@ static void dirwatch_clear_watches (void)
 
 static void dirwatch_disarm_timer (void)
 {
+    timer_armed = FALSE;
     if (timer_fd >= 0)
     {
         struct itimerspec its = { { 0, 0 }, { 0, 0 } };
@@ -92,8 +94,9 @@ static void dirwatch_disarm_timer (void)
 
 static void dirwatch_arm_timer (void)
 {
-    if (timer_fd < 0)
+    if (timer_fd < 0 || timer_armed)
         return;
+    /* Rate-limit refreshes instead of delaying forever while events keep arriving. */
     struct itimerspec its;
     its.it_interval.tv_sec = 0;
     its.it_interval.tv_nsec = 0;
@@ -103,6 +106,7 @@ static void dirwatch_arm_timer (void)
     its.it_value.tv_sec = secs;
     its.it_value.tv_nsec = 0;
     (void) timerfd_settime (timer_fd, 0, &its, NULL);
+    timer_armed = TRUE;
 }
 
 static gboolean dirwatch_panel_should_watch (WPanel *p, const char **out_path)
@@ -288,6 +292,7 @@ void dirwatch_set_enabled (gboolean enabled)
         }
         if (timer_fd >= 0)
         {
+            dirwatch_disarm_timer ();
             delete_select_channel (timer_fd);
             close (timer_fd);
             timer_fd = -1;

@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Midnight Commander\n"
 "Report-Msgid-Bugs-To: https://github.com/MidnightCommander/mc/issues\n"
-"POT-Creation-Date: 2025-11-16 05:51-0800\n"
+"POT-Creation-Date: 2025-12-11 16:20-0800\n"
 "PO-Revision-Date: 2010-12-29 10:19+0000\n"
 "Last-Translator: Yury V. Zaytsev <yury@shurup.com>, 2025\n"
 "Language-Team: Catalan (http://app.transifex.com/mc/mc/language/ca/)\n"
@@ -4635,8 +4635,9 @@ msgstr "intèrpret d'ordres: emmagatzematge %s: s'està enviant l'ordre..."
 msgid "shell: Local read failed, sending zeros"
 msgstr "intèrpret d'ordres: La lectura local ha fallat, s'estan enviant zeros"
 
-msgid "shell: storing file"
-msgstr "intèrpret d'ordres: fitxer d'emmagatzematge"
+#, fuzzy, c-format
+msgid "%s %s %s %s %s"
+msgstr "Temps: %s %s (%s)"
 
 msgid "Aborting transfer..."
 msgstr "S'està interrompent la transferència..."
@@ -4859,6 +4860,9 @@ msgstr "Voleu continuar des del començament?"
 msgid "Cannot fetch a local copy of /ftp://some.host/editme.txt"
 msgstr ""
 "No s'ha pogut obtenir una còpia local de /ftp://algun.amfitrió/editam.txt"
+
+#~ msgid "shell: storing file"
+#~ msgstr "intèrpret d'ordres: fitxer d'emmagatzematge"
 
 #, c-format
 #~ msgid ""
