@@ -2,4 +2,7 @@ Features in versions (C) River Microelectronics
 
 Dynamic file list
 Options > Layout > Dynamic file list
-The file list updates automatically using Linux’s inotify filesystem notifications, so you don’t need to refresh or rescan. Rapid change events are debounced to keep the interface smooth and prevent flickering.
+The file list updates automatically using Linux’s inotify filesystem notifications, so you don’t need to refresh or rescan. Rapid change events are debounced to keep the interface smooth and prevent flickering. Size changes to existing files are tracked too, so growth/shrink updates the panel.
+
+Internal editor default
+Editing from file associations now defaults to the built-in mcedit (falls back to $EDITOR if set), so source and text files open inside mc out of the box.

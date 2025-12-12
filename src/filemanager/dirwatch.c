@@ -58,7 +58,8 @@ static gboolean pending_right = FALSE;
 /* debouncing interval comes from layout setting */
 
 static const uint32_t DW_MASK =
-    IN_CREATE | IN_DELETE | IN_MOVED_FROM | IN_MOVED_TO | IN_DELETE_SELF | IN_MOVE_SELF | IN_ATTRIB;
+    IN_CREATE | IN_DELETE | IN_MOVED_FROM | IN_MOVED_TO | IN_DELETE_SELF | IN_MOVE_SELF | IN_ATTRIB |
+    IN_MODIFY | IN_CLOSE_WRITE;
 
 static void dirwatch_reset_paths (void)
 {
