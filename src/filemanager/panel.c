@@ -2906,7 +2906,18 @@ do_enter_on_file_entry (WPanel *panel, const file_entry_t *fe)
             return TRUE;
         }
 
-        fname_vpath = vfs_path_from_str (fname);
+        /* Some panel listings can contain absolute-looking entries (e.g. "/data").
+         * Treat such names as absolute paths, otherwise later resolution may
+         * incorrectly join them with the current directory (e.g. "/tmp" + "data"
+         * => "/tmp/data").
+         *
+         * Note: If fname starts with '/', it's already absolute. If it starts
+         * with PATH_SEP_STR but lacks a leading '/', it won't reach this branch.
+         */
+        if (fname[0] == PATH_SEP)
+            fname_vpath = vfs_path_from_str (fname);
+        else
+            fname_vpath = vfs_path_append_new (panel->cwd_vpath, fname, (char *) NULL);
         if (!panel_cd (panel, fname_vpath, cd_exact))
             cd_error_message (fname);
         vfs_path_free (fname_vpath, TRUE);
