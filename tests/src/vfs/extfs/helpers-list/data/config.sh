@@ -4,6 +4,6 @@
 # See README for how to use this file.
 #
 PERL="/usr/bin/perl"
-AWK="mawk"
-PYTHON="/usr/bin/python3"
-RUBY="/usr/bin/ruby"
+AWK="gawk"
+PYTHON="/home/cris/miniconda3/envs/ai/bin/python3"
+RUBY="/usr/bin/env ruby"

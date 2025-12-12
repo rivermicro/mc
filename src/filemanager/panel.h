@@ -154,7 +154,7 @@ WPanel *panel_sized_with_dir_new (const char *panel_name, const WRect *r, const 
 
 void panel_clean_dir (WPanel *panel);
 
-void panel_reload (WPanel *panel);
+void panel_reload (WPanel *panel, gboolean force_reload);
 void panel_set_sort_order (WPanel *panel, const panel_field_t *sort_order);
 void panel_re_sort (WPanel *panel);
 

@@ -4204,7 +4204,7 @@ update_one_panel_widget (WPanel *panel, panel_update_flags_t flags, const char *
     if (panel->is_panelized)
         reload_panelized (panel);
     else
-        panel_reload (panel);
+        panel_reload (panel, FALSE);
 
     panel_set_current_by_name (panel, current_file);
     panel->dirty = TRUE;
@@ -4640,12 +4640,13 @@ panel_sized_with_dir_new (const char *panel_name, const WRect *r, const vfs_path
 /* --------------------------------------------------------------------------------------------- */
 
 void
-panel_reload (WPanel *panel)
+panel_reload (WPanel *panel, gboolean force_reload)
 {
     struct stat current_stat;
     vfs_path_t *cwd_vpath;
 
-    if (panels_options.fast_reload && stat (vfs_path_as_str (panel->cwd_vpath), &current_stat) == 0
+    if (!force_reload && panels_options.fast_reload
+        && stat (vfs_path_as_str (panel->cwd_vpath), &current_stat) == 0
         && current_stat.st_ctime == panel->dir_stat.st_ctime
         && current_stat.st_mtime == panel->dir_stat.st_mtime)
         return;
@@ -4980,7 +4981,7 @@ panel_set_sort_order (WPanel *panel, const panel_field_t *sort_order)
         fe = panel_current_entry (panel);
         if (fe != NULL)
             current_file = g_strndup (fe->fname->str, fe->fname->len);
-        panel_reload (panel);
+        panel_reload (panel, FALSE);
         panel_set_current_by_name (panel, current_file);
         g_free (current_file);
     }

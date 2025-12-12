@@ -5,7 +5,7 @@
 # tested to comply with the output of unsquashfs version 4.6.1 (2023/03/25)
 
 SQUASHFS="${MC_TEST_EXTFS_LIST_CMD:-unsquashfs}"
-AWK="mawk"
+AWK="gawk"
 MV=mv
 RM=rm
 

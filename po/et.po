@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Midnight Commander\n"
 "Report-Msgid-Bugs-To: https://github.com/MidnightCommander/mc/issues\n"
-"POT-Creation-Date: 2025-11-16 05:51-0800\n"
+"POT-Creation-Date: 2025-12-11 16:20-0800\n"
 "PO-Revision-Date: 2010-12-29 10:19+0000\n"
 "Last-Translator: Yury V. Zaytsev <yury@shurup.com>, 2025\n"
 "Language-Team: Estonian (http://app.transifex.com/mc/mc/language/et/)\n"
@@ -4605,8 +4605,9 @@ msgstr "kes: salvesta %s: saadetakse käsku..."
 msgid "shell: Local read failed, sending zeros"
 msgstr "kest: kohalik lugemine nurjus, saadetakse nullid"
 
-msgid "shell: storing file"
-msgstr "kest: faili salvestamine"
+#, fuzzy, c-format
+msgid "%s %s %s %s %s"
+msgstr "Aeg: %s %s (%s)"
 
 msgid "Aborting transfer..."
 msgstr "Saatmine katkestatakse..."
@@ -4827,6 +4828,9 @@ msgstr "Kas jätkata algusest?"
 
 msgid "Cannot fetch a local copy of /ftp://some.host/editme.txt"
 msgstr "Kohaliku koopia hankimine failist /ftp://some.host/editme.txt nurjus"
+
+#~ msgid "shell: storing file"
+#~ msgstr "kest: faili salvestamine"
 
 #, c-format
 #~ msgid ""

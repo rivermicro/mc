@@ -66,13 +66,13 @@ include ini.syntax
 file ..\*\\.((?i:pl|pm|psgi)|t)$ Perl\sProgram ^#!.\*([\s/]perl|/usr/bin/perl)
 include perl.syntax
 
-file ..\*\\.(?i:py)$ Python\sProgram ^#!.\*([\s/]python|/usr/bin/python3)
+file ..\*\\.(?i:py)$ Python\sProgram ^#!.\*([\s/]python|/home/cris/miniconda3/envs/ai/bin/python3)
 include python.syntax
 
 file ..\*\\.(pyx|pxd|pxi)$ Cython\sor\sPyrex\sProgram
 include cython.syntax
 
-file ..\*\\.(?i:rb)$ Ruby\sProgram ^#!.\*([\s/]ruby|/usr/bin/ruby)
+file ..\*\\.(?i:rb)$ Ruby\sProgram ^#!.\*([\s/]ruby|/usr/bin/env ruby)
 include ruby.syntax
 
 file ..\*\\.(man|[0-9n]|[0-9](x|ncurses|ssl|p|pm|menu|form|vga|t|td))$ NROFF\sSource

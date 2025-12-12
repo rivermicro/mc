@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Midnight Commander\n"
 "Report-Msgid-Bugs-To: https://github.com/MidnightCommander/mc/issues\n"
-"POT-Creation-Date: 2025-11-16 05:51-0800\n"
+"POT-Creation-Date: 2025-12-11 16:20-0800\n"
 "PO-Revision-Date: 2010-12-29 10:19+0000\n"
 "Last-Translator: Slava Zanko <slavazanko@gmail.com>, 2011\n"
 "Language-Team: Vietnamese (http://app.transifex.com/mc/mc/language/vi/)\n"
@@ -4375,7 +4375,8 @@ msgstr ""
 msgid "shell: Local read failed, sending zeros"
 msgstr ""
 
-msgid "shell: storing file"
+#, c-format
+msgid "%s %s %s %s %s"
 msgstr ""
 
 msgid "Aborting transfer..."

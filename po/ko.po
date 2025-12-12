@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Midnight Commander\n"
 "Report-Msgid-Bugs-To: https://github.com/MidnightCommander/mc/issues\n"
-"POT-Creation-Date: 2025-11-16 05:51-0800\n"
+"POT-Creation-Date: 2025-12-11 16:20-0800\n"
 "PO-Revision-Date: 2010-12-29 10:19+0000\n"
 "Last-Translator: Yury V. Zaytsev <yury@shurup.com>, 2025\n"
 "Language-Team: Korean (http://app.transifex.com/mc/mc/language/ko/)\n"
@@ -4568,8 +4568,9 @@ msgstr "셸: %s 저장: 명령 보내는 중..."
 msgid "shell: Local read failed, sending zeros"
 msgstr "셸: 로컬 읽기를 실패했습니다. 0값 보내는 중"
 
-msgid "shell: storing file"
-msgstr "셸: 파일 저장 중"
+#, fuzzy, c-format
+msgid "%s %s %s %s %s"
+msgstr "시간: %s %s (%s)"
 
 msgid "Aborting transfer..."
 msgstr "전송을 중단하는 중..."
@@ -4790,6 +4791,9 @@ msgstr "처음부터 계속하시겠습니까?"
 
 msgid "Cannot fetch a local copy of /ftp://some.host/editme.txt"
 msgstr "/ftp://some.host/editme.txt의 로컬 복사본을 가져올 수 없음"
+
+#~ msgid "shell: storing file"
+#~ msgstr "셸: 파일 저장 중"
 
 #, c-format
 #~ msgid ""

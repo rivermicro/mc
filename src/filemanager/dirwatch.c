@@ -233,9 +233,9 @@ dirwatch_apply_pending (void)
     pending_left = pending_right = FALSE;
 
     if (do_left && left_panel != NULL)
-        panel_reload (left_panel);
+        panel_reload (left_panel, TRUE);
     if (do_right && right_panel != NULL)
-        panel_reload (right_panel);
+        panel_reload (right_panel, TRUE);
 
     if (do_left || do_right)
         repaint_screen ();
