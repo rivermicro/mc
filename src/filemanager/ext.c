@@ -508,7 +508,12 @@ exec_extension (WPanel *panel, void *target, const vfs_path_t *filename_vpath, c
     }
     else
     {
-        shell_execute (cmd, EXECUTE_INTERNAL);
+        int exec_flags = EXECUTE_INTERNAL;
+
+        if (panel != NULL && panel->is_panelized)
+            exec_flags |= EXECUTE_PRESERVE_CWD;
+
+        shell_execute (cmd, exec_flags);
         if (mc_global.tty.console_flag != '\0')
         {
             handle_console (CONSOLE_SAVE);

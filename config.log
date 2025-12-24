@@ -3246,7 +3246,7 @@ configure:21912: $? = 0
 configure:21912: result: yes
 configure:21965: checking for statlstat
 configure:21965: gcc -o conftest -g -O2     conftest.c  >&5
-/usr/bin/ld: /tmp/ccBSzLlw.o: in function `main':
+/usr/bin/ld: /tmp/ccei3fFZ.o: in function `main':
 /home/cris/git/mc/conftest.c:110:(.text.startup+0xb): undefined reference to `statlstat'
 collect2: error: ld returned 1 exit status
 configure:21965: $? = 1
@@ -3373,7 +3373,7 @@ configure:21985: checking for utime.h
 configure:21985: result: yes
 configure:21995: checking for listmntent
 configure:21995: gcc -o conftest -g -O2     conftest.c  >&5
-/usr/bin/ld: /tmp/cc2XP9Yk.o: in function `main':
+/usr/bin/ld: /tmp/ccJnXUZN.o: in function `main':
 /home/cris/git/mc/conftest.c:112:(.text.startup+0xb): undefined reference to `listmntent'
 collect2: error: ld returned 1 exit status
 configure:21995: $? = 1
@@ -7361,7 +7361,7 @@ MANDOC='-mandoc'
 MANIFEST_TOOL=':'
 MAN_DATE='December 2025'
 MAN_FLAGS='-c -Tlatin1'
-MAN_VERSION='d9c9066'
+MAN_VERSION='e4976f9'
 MCLIBS='-lslang   -lssh2 '
 MKDIR_P='/usr/bin/mkdir -p'
 MSGFMT='/usr/bin/msgfmt'
@@ -7415,7 +7415,7 @@ USE_NLS_FALSE='#'
 USE_NLS_TRUE=''
 USE_SCREEN_SLANG_FALSE='#'
 USE_SCREEN_SLANG_TRUE=''
-VERSION='d9c9066'
+VERSION='e4976f9'
 XGETTEXT='/usr/bin/xgettext'
 XGETTEXT_015='/usr/bin/xgettext'
 XGETTEXT_EXTRA_OPTIONS=''

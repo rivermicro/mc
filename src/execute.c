@@ -295,9 +295,15 @@ do_executev (const char *shell, int flags, char *const argv[])
 {
 #ifdef ENABLE_SUBSHELL
     vfs_path_t *new_dir_vpath = NULL;
+    vfs_path_t *preserve_cwd_vpath = NULL;
 #endif
 
     vfs_path_t *old_vfs_dir_vpath = NULL;
+
+#ifdef ENABLE_SUBSHELL
+    if ((flags & EXECUTE_PRESERVE_CWD) != 0)
+        preserve_cwd_vpath = vfs_path_clone (vfs_get_raw_current_dir ());
+#endif
 
     if (!vfs_current_is_local ())
         old_vfs_dir_vpath = vfs_path_clone (vfs_get_raw_current_dir ());
@@ -358,10 +364,15 @@ do_executev (const char *shell, int flags, char *const argv[])
 #ifdef ENABLE_SUBSHELL
     if (new_dir_vpath != NULL)
     {
-        do_possible_cd (new_dir_vpath);
+        if ((flags & EXECUTE_PRESERVE_CWD) == 0)
+            do_possible_cd (new_dir_vpath);
+        else if (preserve_cwd_vpath != NULL)
+        {
+            /* Keep subshell in sync with panelized cwd while leaving panelized listing intact. */
+            subshell_chdir (preserve_cwd_vpath);
+        }
         vfs_path_free (new_dir_vpath, TRUE);
     }
-
 #endif
 
     if (old_vfs_dir_vpath != NULL)
@@ -379,6 +390,10 @@ do_executev (const char *shell, int flags, char *const argv[])
 
     do_refresh ();
     use_dash (TRUE);
+
+#ifdef ENABLE_SUBSHELL
+    vfs_path_free (preserve_cwd_vpath, TRUE);
+#endif
 }
 
 /* --------------------------------------------------------------------------------------------- */
@@ -619,7 +634,14 @@ execute_with_vfs_arg (const char *command, const vfs_path_t *filename_vpath)
 
     do_execute_vpath = (localcopy_vpath == NULL) ? filename_vpath : localcopy_vpath;
 
-    do_execute (command, vfs_path_get_last_path_str (do_execute_vpath), EXECUTE_INTERNAL);
+    {
+        int exec_flags = EXECUTE_INTERNAL;
+
+        if (current_panel != NULL && current_panel->is_panelized)
+            exec_flags |= EXECUTE_PRESERVE_CWD;
+
+        do_execute (command, vfs_path_get_last_path_str (do_execute_vpath), exec_flags);
+    }
 
     execute_cleanup_with_vfs_arg (filename_vpath, &localcopy_vpath, &mtime);
 }
@@ -655,14 +677,18 @@ execute_external_editor_or_viewer (const char *command, const vfs_path_t *filena
     {
         char **argv_cmd_options;
         int argv_count;
+        int exec_flags = EXECUTE_INTERNAL;
+
+        if (current_panel != NULL && current_panel->is_panelized)
+            exec_flags |= EXECUTE_PRESERVE_CWD;
 
         if (g_shell_parse_argv (extern_cmd_options, &argv_count, &argv_cmd_options, NULL))
         {
-            do_executev (command, EXECUTE_INTERNAL, argv_cmd_options);
+            do_executev (command, exec_flags, argv_cmd_options);
             g_strfreev (argv_cmd_options);
         }
         else
-            do_executev (command, EXECUTE_INTERNAL, NULL);
+            do_executev (command, exec_flags, NULL);
 
         g_free (extern_cmd_options);
     }

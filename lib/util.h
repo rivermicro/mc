@@ -77,6 +77,7 @@
 
 /* flags for shell_execute */
 #define EXECUTE_INTERNAL (1 << 0)
+#define EXECUTE_PRESERVE_CWD (1 << 1)  // Do not sync MC cwd to subshell cwd after the command
 #define EXECUTE_AS_SHELL (1 << 2)
 #define EXECUTE_HIDE     (1 << 3)
 
